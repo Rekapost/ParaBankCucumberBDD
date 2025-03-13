@@ -1,236 +1,191 @@
-[INFO ] 2025-03-12 13:23:29.030 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 13:23:30.553 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 13:23:30.553 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 13:23:30.580 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 13:23:31.445 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 13:23:32.209 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 13:23:32.210 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 13:23:32.210 [main] RegisterStepDefinition - Generated Username: TestUser1741803812210
-[INFO ] 2025-03-12 13:23:32.213 [main] RegisterStepDefinition - Generated Password: Test@6734
-[INFO ] 2025-03-12 13:27:00.071 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 13:27:01.579 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 13:27:01.579 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 13:27:01.606 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 13:27:02.351 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 13:27:03.163 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 13:27:03.164 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 13:27:03.164 [main] RegisterStepDefinition - Generated Username: TestUser1741804023164
-[INFO ] 2025-03-12 13:27:03.164 [main] RegisterStepDefinition - Generated Password: Test@3124
-[INFO ] 2025-03-12 13:27:03.656 [main] RegisterStepDefinition - Entered credentials successfully
-[INFO ] 2025-03-12 13:28:17.894 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 13:28:19.566 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 13:28:19.568 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 13:28:19.599 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 13:28:20.394 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 13:28:21.266 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 13:28:21.267 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 13:28:21.267 [main] RegisterStepDefinition - Generated Username: TestUser1741804101267
-[INFO ] 2025-03-12 13:28:21.267 [main] RegisterStepDefinition - Generated Password: Test@9652
-[INFO ] 2025-03-12 13:28:21.780 [main] RegisterStepDefinition - Entered credentials successfully
-[INFO ] 2025-03-12 13:28:21.781 [main] RegisterStepDefinition - Submitting registration form
-[ERROR] 2025-03-12 13:28:22.096 [main] RegisterStepDefinition - UI Error Message: Please enter a username and password.
-[INFO ] 2025-03-12 13:31:31.574 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 13:31:33.293 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 13:31:33.293 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 13:31:33.326 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 13:31:34.221 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 13:31:35.022 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 13:31:35.023 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 13:31:35.024 [main] RegisterStepDefinition - Generated Username: TestUser7063
-[INFO ] 2025-03-12 13:31:35.024 [main] RegisterStepDefinition - Generated Password: Test@6891
-[INFO ] 2025-03-12 13:34:21.642 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 13:34:23.263 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 13:34:23.263 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 13:34:23.290 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 13:34:24.064 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 13:34:24.874 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 13:34:24.875 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 13:34:24.876 [main] RegisterStepDefinition - Generated Username: TestUser9806
-[INFO ] 2025-03-12 13:34:24.877 [main] RegisterStepDefinition - Generated Password: Test@4972
-[INFO ] 2025-03-12 13:34:25.151 [main] RegisterStepDefinition - Entered credentials successfully: TestUser9806 / Test@4972
-[INFO ] 2025-03-12 13:34:25.152 [main] RegisterStepDefinition - Submitting registration form
-[ERROR] 2025-03-12 13:34:25.495 [main] RegisterStepDefinition - UI Error Message: Please enter a username and password.
-[INFO ] 2025-03-12 13:37:24.281 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 13:37:26.094 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 13:37:26.095 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 13:37:26.124 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 13:37:27.061 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 13:37:27.764 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 13:37:27.765 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 13:37:27.765 [main] RegisterStepDefinition - Generated Username: TestUser9545
-[INFO ] 2025-03-12 13:37:27.765 [main] RegisterStepDefinition - Generated Password: Test@9788
-[INFO ] 2025-03-12 13:37:28.028 [main] RegisterStepDefinition - Entered credentials successfully: TestUser9545 / Test@9788
-[INFO ] 2025-03-12 13:37:28.029 [main] RegisterStepDefinition - Submitting registration form
-[ERROR] 2025-03-12 13:37:28.407 [main] RegisterStepDefinition - UI Error Message: Please enter a username and password.
-[INFO ] 2025-03-12 14:38:28.596 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 14:38:40.050 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 14:38:40.050 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 14:38:40.138 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 14:38:40.998 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 14:38:44.094 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 14:38:44.100 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 14:38:44.101 [main] RegisterStepDefinition - Generated Username: TestUser3736
-[INFO ] 2025-03-12 14:38:44.101 [main] RegisterStepDefinition - Generated Password: Test@2099
-[INFO ] 2025-03-12 14:38:45.663 [main] RegisterStepDefinition - Entered credentials successfully: TestUser3736 / Test@2099
-[INFO ] 2025-03-12 14:38:45.672 [main] RegisterStepDefinition - Submitting registration form
-[ERROR] 2025-03-12 14:38:46.332 [main] RegisterStepDefinition - UI Error Message: Please enter a username and password.
-[INFO ] 2025-03-12 14:45:59.695 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 14:46:01.067 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 14:46:01.067 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 14:46:01.103 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 14:46:02.058 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 14:46:02.823 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 14:46:02.824 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 14:46:02.825 [main] RegisterStepDefinition - Generated Username: TestUser8310
-[INFO ] 2025-03-12 14:46:02.825 [main] RegisterStepDefinition - Generated Password: Test@6435
-[INFO ] 2025-03-12 14:46:03.075 [main] RegisterStepDefinition - Entered credentials successfully: TestUser8310 / Test@6435
-[INFO ] 2025-03-12 14:46:03.076 [main] RegisterStepDefinition - Submitting registration form
-[ERROR] 2025-03-12 14:46:03.438 [main] RegisterStepDefinition - UI Error Message: Please enter a username and password.
-[INFO ] 2025-03-12 14:48:27.691 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 14:48:28.951 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 14:48:28.951 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 14:48:28.980 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 14:48:29.713 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 14:48:30.510 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 14:48:30.511 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 14:48:30.512 [main] RegisterStepDefinition - Generated Username: TestUser5282
-[INFO ] 2025-03-12 14:48:30.512 [main] RegisterStepDefinition - Generated Password: Test@1740
-[INFO ] 2025-03-12 14:48:30.903 [main] RegisterStepDefinition - Entered credentials successfully: TestUser5282 / Test@1740
-[INFO ] 2025-03-12 14:48:30.905 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-12 14:48:30.905 [main] RegisterStepDefinition - Registration form submitted successfully.
-[ERROR] 2025-03-12 14:48:41.160 [main] RegisterStepDefinition - Navigation to login page failed: ParaBank | Customer Created
-[INFO ] 2025-03-12 14:58:02.290 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 14:58:03.642 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 14:58:03.642 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 14:58:03.670 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 14:58:04.532 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 14:58:05.365 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 14:58:05.365 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 14:58:05.366 [main] RegisterStepDefinition - Generated Username: TestUser8767
-[INFO ] 2025-03-12 14:58:05.366 [main] RegisterStepDefinition - Generated Password: Test@7075
-[INFO ] 2025-03-12 14:58:05.773 [main] RegisterStepDefinition - Entered credentials successfully: TestUser8767 / Test@7075
-[INFO ] 2025-03-12 14:58:05.774 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-12 14:58:05.775 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-12 14:58:05.905 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-12 14:58:05.935 [main] RegisterStepDefinition - Registration success message: Welcome TestUser8767
-[INFO ] 2025-03-12 14:58:05.955 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-12 14:58:06.030 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 14:58:06.030 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 14:58:06.032 [main] RegisterStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-12 14:58:06.466 [main] RegisterStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-12 15:51:13.809 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 15:51:15.512 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 15:51:15.512 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 15:51:15.546 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 15:51:16.896 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 15:51:17.892 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 15:51:17.893 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 15:51:17.894 [main] RegisterStepDefinition - Generated Username: TestUser7355
-[INFO ] 2025-03-12 15:51:17.894 [main] RegisterStepDefinition - Generated Password: Test@2963
-[INFO ] 2025-03-12 15:51:18.410 [main] RegisterStepDefinition - Entered credentials successfully: TestUser7355 / Test@2963
-[INFO ] 2025-03-12 15:51:18.413 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-12 15:51:18.413 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-12 15:51:18.642 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-12 15:51:18.677 [main] RegisterStepDefinition - Registration success message: Welcome TestUser7355
-[INFO ] 2025-03-12 15:51:18.708 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-12 15:51:18.805 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 15:51:18.805 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 15:51:18.807 [main] RegisterStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-12 15:51:19.137 [main] RegisterStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-12 15:54:17.671 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 15:54:19.260 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 15:54:19.260 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 15:54:19.303 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 15:54:20.365 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 15:54:21.365 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 15:54:21.366 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 15:54:21.366 [main] RegisterStepDefinition - Generated Username: TestUser9548
-[INFO ] 2025-03-12 15:54:21.366 [main] RegisterStepDefinition - Generated Password: Test@9326
-[INFO ] 2025-03-12 15:54:21.909 [main] RegisterStepDefinition - Entered credentials successfully: TestUser9548 / Test@9326
-[INFO ] 2025-03-12 15:54:21.911 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-12 15:54:21.911 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-12 15:54:22.035 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-12 15:54:22.073 [main] RegisterStepDefinition - Registration success message: Welcome TestUser9548
-[INFO ] 2025-03-12 15:54:22.104 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-12 15:54:22.185 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 15:54:22.186 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 15:54:22.187 [main] RegisterStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-12 15:54:22.489 [main] RegisterStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-12 15:57:18.921 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 15:57:20.572 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 15:57:20.573 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 15:57:20.609 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 15:57:21.966 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 15:57:23.079 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 15:57:23.080 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 15:57:23.081 [main] RegisterStepDefinition - Generated Username: TestUser2553
-[INFO ] 2025-03-12 15:57:23.081 [main] RegisterStepDefinition - Generated Password: Test@2622
-[INFO ] 2025-03-12 15:57:23.569 [main] RegisterStepDefinition - Entered credentials successfully: TestUser2553 / Test@2622
-[INFO ] 2025-03-12 15:57:23.573 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-12 15:57:23.573 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-12 15:57:23.816 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-12 15:57:23.857 [main] RegisterStepDefinition - Registration success message: Welcome TestUser2553
-[INFO ] 2025-03-12 15:57:23.884 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-12 15:57:23.960 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 15:57:23.960 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 15:57:23.964 [main] RegisterStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-12 15:57:24.317 [main] RegisterStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-12 15:57:24.597 [main] RegisterStepDefinition - Got all details of the account
-[INFO ] 2025-03-12 15:57:24.600 [main] RegisterStepDefinition - Opening a new bank account
-[INFO ] 2025-03-12 15:57:24.828 [main] RegisterStepDefinition - clicked open new account
-[INFO ] 2025-03-12 15:57:24.969 [main] RegisterStepDefinition - Selected account type: Savings
-[INFO ] 2025-03-12 15:57:25.051 [main] RegisterStepDefinition - Input deposit amount: 1000
-[INFO ] 2025-03-12 16:04:08.528 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 16:04:10.329 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 16:04:10.329 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 16:04:10.384 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 16:04:11.472 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 16:04:12.665 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 16:04:12.666 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 16:04:12.667 [main] RegisterStepDefinition - Generated Username: TestUser6466
-[INFO ] 2025-03-12 16:04:12.667 [main] RegisterStepDefinition - Generated Password: Test@4243
-[INFO ] 2025-03-12 16:04:13.316 [main] RegisterStepDefinition - Entered credentials successfully: TestUser6466 / Test@4243
-[INFO ] 2025-03-12 16:04:13.318 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-12 16:04:13.319 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-12 16:04:13.487 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-12 16:04:13.517 [main] RegisterStepDefinition - Registration success message: Welcome TestUser6466
-[INFO ] 2025-03-12 16:04:13.540 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-12 16:04:13.664 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 16:04:13.664 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 16:04:13.666 [main] RegisterStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-12 16:04:14.076 [main] RegisterStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-12 16:04:14.256 [main] RegisterStepDefinition - Got all details of the account
-[INFO ] 2025-03-12 16:04:14.258 [main] RegisterStepDefinition - Opening a new bank account
-[INFO ] 2025-03-12 16:04:14.482 [main] RegisterStepDefinition - clicked open new account
-[INFO ] 2025-03-12 16:04:14.640 [main] RegisterStepDefinition - Selected account type: Savings
-[INFO ] 2025-03-12 16:04:14.737 [main] RegisterStepDefinition - Input deposit amount: 1000
-[INFO ] 2025-03-12 16:04:14.816 [main] RegisterStepDefinition - Opened new account form
-[INFO ] 2025-03-12 16:04:14.822 [main] RegisterStepDefinition - Account created successfully
-[INFO ] 2025-03-12 16:04:14.872 [main] RegisterStepDefinition - Account opened successfully
-[INFO ] 2025-03-12 16:16:21.363 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-12 16:16:22.860 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 16:16:22.860 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 16:16:22.898 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-12 16:16:24.317 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-12 16:16:25.360 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-12 16:16:25.590 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-12 16:16:25.590 [main] RegisterStepDefinition - Generated Username: TestUser5745
-[INFO ] 2025-03-12 16:16:25.590 [main] RegisterStepDefinition - Generated Password: Test@6144
-[INFO ] 2025-03-12 16:16:26.252 [main] RegisterStepDefinition - Entered credentials successfully: TestUser5745 / Test@6144
-[INFO ] 2025-03-12 16:16:26.578 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-12 16:16:26.578 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-12 16:16:26.793 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-12 16:16:26.836 [main] RegisterStepDefinition - Registration success message: Welcome TestUser5745
-[INFO ] 2025-03-12 16:16:26.860 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-12 16:16:27.164 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-12 16:16:27.165 [main] Loggerload - Login App URL
-[INFO ] 2025-03-12 16:16:27.167 [main] RegisterStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-12 16:16:27.754 [main] RegisterStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-12 16:16:27.952 [main] RegisterStepDefinition - Got all details of the account
-[INFO ] 2025-03-12 16:16:28.213 [main] RegisterStepDefinition - Opening a new bank account
-[INFO ] 2025-03-12 16:16:28.557 [main] RegisterStepDefinition - clicked open new account
-[INFO ] 2025-03-12 16:16:28.754 [main] RegisterStepDefinition - Selected account type: Savings
-[INFO ] 2025-03-12 16:16:28.857 [main] RegisterStepDefinition - Input deposit amount: 1000
-[INFO ] 2025-03-12 16:16:28.954 [main] RegisterStepDefinition - Opened new account form
-[INFO ] 2025-03-12 16:16:28.965 [main] RegisterStepDefinition - Account created successfully
-[INFO ] 2025-03-12 16:16:29.029 [main] RegisterStepDefinition - Account opened successfully
+[INFO ] 2025-03-13 13:36:57.265 [TestNG-PoolService-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-13 13:36:57.265 [TestNG-PoolService-2] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-13 13:36:59.349 [TestNG-PoolService-2] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:36:59.349 [TestNG-PoolService-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:36:59.384 [TestNG-PoolService-1] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:36:59.385 [TestNG-PoolService-2] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:37:04.246 [TestNG-PoolService-1] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:37:04.322 [TestNG-PoolService-2] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:37:05.714 [TestNG-PoolService-1] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:37:05.743 [TestNG-PoolService-2] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:37:06.096 [TestNG-PoolService-1] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:37:06.098 [TestNG-PoolService-1] AccountStepDefinition - Generated Username: TestUser9813
+[INFO ] 2025-03-13 13:37:06.099 [TestNG-PoolService-1] AccountStepDefinition - Generated Password: Test@265
+[INFO ] 2025-03-13 13:37:06.195 [TestNG-PoolService-2] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:37:06.196 [TestNG-PoolService-2] AccountStepDefinition - Generated Username: TestUser5983
+[INFO ] 2025-03-13 13:37:06.196 [TestNG-PoolService-2] AccountStepDefinition - Generated Password: Test@268
+[INFO ] 2025-03-13 13:37:06.646 [TestNG-PoolService-1] AccountStepDefinition - Entered credentials successfully: TestUser9813 / Test@265
+[INFO ] 2025-03-13 13:37:06.679 [TestNG-PoolService-2] AccountStepDefinition - Entered credentials successfully: TestUser5983 / Test@268
+[INFO ] 2025-03-13 13:37:06.991 [TestNG-PoolService-1] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:37:06.992 [TestNG-PoolService-1] AccountStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-13 13:37:07.103 [TestNG-PoolService-2] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:37:07.104 [TestNG-PoolService-2] AccountStepDefinition - Registration form submitted successfully.
+[ERROR] 2025-03-13 13:37:17.431 [TestNG-PoolService-1] AccountStepDefinition - Navigation to login page failed: ParaBank | Register for Free Online Account Access
+[ERROR] 2025-03-13 13:37:17.902 [TestNG-PoolService-2] AccountStepDefinition - Navigation to login page failed: ParaBank | Register for Free Online Account Access
+[INFO ] 2025-03-13 13:38:01.513 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-13 13:38:02.989 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:38:03.023 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:38:07.295 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:38:08.527 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:38:08.741 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:38:08.742 [main] AccountStepDefinition - Generated Username: TestUser2671
+[INFO ] 2025-03-13 13:38:08.742 [main] AccountStepDefinition - Generated Password: Test@529
+[INFO ] 2025-03-13 13:38:09.037 [main] AccountStepDefinition - Entered credentials successfully: TestUser2671 / Test@529
+[INFO ] 2025-03-13 13:38:09.267 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:38:09.267 [main] AccountStepDefinition - Registration form submitted successfully.
+[ERROR] 2025-03-13 13:38:19.922 [main] AccountStepDefinition - Navigation to login page failed: ParaBank | Register for Free Online Account Access
+[INFO ] 2025-03-13 13:38:20.246 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:38:20.250 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:38:20.684 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:38:21.585 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:38:21.804 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:38:21.804 [main] AccountStepDefinition - Generated Username: TestUser6315
+[INFO ] 2025-03-13 13:38:21.805 [main] AccountStepDefinition - Generated Password: Test@498
+[INFO ] 2025-03-13 13:38:22.206 [main] AccountStepDefinition - Entered credentials successfully: TestUser6315 / Test@498
+[INFO ] 2025-03-13 13:38:22.416 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:38:22.416 [main] AccountStepDefinition - Registration form submitted successfully.
+[ERROR] 2025-03-13 13:38:33.072 [main] AccountStepDefinition - Navigation to login page failed: ParaBank | Register for Free Online Account Access
+[INFO ] 2025-03-13 13:39:33.065 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-13 13:39:34.544 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:39:34.571 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:39:38.866 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:39:39.805 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:39:39.997 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:39:39.999 [main] AccountStepDefinition - Generated Username: TestUser3281
+[INFO ] 2025-03-13 13:39:39.999 [main] AccountStepDefinition - Generated Password: Test@990
+[INFO ] 2025-03-13 13:39:40.522 [main] AccountStepDefinition - Entered credentials successfully: TestUser3281 / Test@990
+[INFO ] 2025-03-13 13:39:40.887 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:39:40.888 [main] AccountStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-13 13:39:41.084 [main] AccountStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-13 13:39:41.109 [main] AccountStepDefinition - Registration success message: Welcome TestUser3281
+[INFO ] 2025-03-13 13:39:41.133 [main] AccountStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-13 13:39:41.314 [main] Loggerload - Login App URL
+[INFO ] 2025-03-13 13:39:41.317 [main] AccountStepDefinition - I am in Login Page
+[INFO ] 2025-03-13 13:39:42.097 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:39:42.103 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:39:42.501 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:39:43.105 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:39:43.330 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:39:43.331 [main] AccountStepDefinition - Generated Username: TestUser7319
+[INFO ] 2025-03-13 13:39:43.331 [main] AccountStepDefinition - Generated Password: Test@214
+[INFO ] 2025-03-13 13:39:43.654 [main] AccountStepDefinition - Entered credentials successfully: TestUser7319 / Test@214
+[INFO ] 2025-03-13 13:39:43.994 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:39:43.994 [main] AccountStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-13 13:39:44.221 [main] AccountStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-13 13:39:44.243 [main] AccountStepDefinition - Registration success message: Welcome TestUser7319
+[INFO ] 2025-03-13 13:39:44.261 [main] AccountStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-13 13:39:44.437 [main] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-13 13:39:44.944 [main] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-13 13:39:45.031 [main] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-13 13:39:45.252 [main] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-13 13:39:45.456 [main] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-13 13:39:45.836 [main] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-13 13:39:46.158 [main] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-13 13:39:46.465 [main] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-13 13:39:46.478 [main] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-13 13:39:46.747 [main] AccountStepDefinition - Account opened successfully
+[INFO ] 2025-03-13 13:42:06.513 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-13 13:42:07.946 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:42:07.973 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:42:12.496 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:42:13.870 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:42:14.076 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:42:14.077 [main] AccountStepDefinition - Generated Username: TestUser4823
+[INFO ] 2025-03-13 13:42:14.077 [main] AccountStepDefinition - Generated Password: Test@4
+[INFO ] 2025-03-13 13:42:14.543 [main] AccountStepDefinition - Entered credentials successfully: TestUser4823 / Test@4
+[INFO ] 2025-03-13 13:42:14.795 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:42:14.796 [main] AccountStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-13 13:42:15.009 [main] AccountStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-13 13:42:15.037 [main] AccountStepDefinition - Registration success message: Welcome TestUser4823
+[INFO ] 2025-03-13 13:42:15.067 [main] AccountStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-13 13:42:15.256 [main] Loggerload - Login App URL
+[INFO ] 2025-03-13 13:42:15.263 [main] AccountStepDefinition - I am in Login Page
+[INFO ] 2025-03-13 13:42:15.678 [main] AccountStepDefinition - Entering credentials: TestUser4823 / Test@4
+[INFO ] 2025-03-13 13:42:41.419 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:42:41.421 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:42:57.308 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-13 13:42:58.642 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:42:58.668 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:43:02.994 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:43:04.081 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:43:04.270 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:43:04.271 [main] AccountStepDefinition - Generated Username: TestUser6307
+[INFO ] 2025-03-13 13:43:04.272 [main] AccountStepDefinition - Generated Password: Test@950
+[INFO ] 2025-03-13 13:43:04.759 [main] AccountStepDefinition - Entered credentials successfully: TestUser6307 / Test@950
+[INFO ] 2025-03-13 13:43:05.026 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:43:05.027 [main] AccountStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-13 13:43:05.240 [main] AccountStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-13 13:43:05.265 [main] AccountStepDefinition - Registration success message: Welcome TestUser6307
+[INFO ] 2025-03-13 13:43:05.285 [main] AccountStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-13 13:43:05.536 [main] Loggerload - Login App URL
+[INFO ] 2025-03-13 13:43:05.538 [main] AccountStepDefinition - I am in Login Page
+[INFO ] 2025-03-13 13:43:05.959 [main] AccountStepDefinition - Entering credentials: TestUser6307 / Test@950
+[INFO ] 2025-03-13 13:43:46.397 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:43:46.399 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:43:46.757 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:43:47.488 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:43:47.703 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:43:47.704 [main] AccountStepDefinition - Generated Username: TestUser2964
+[INFO ] 2025-03-13 13:43:47.704 [main] AccountStepDefinition - Generated Password: Test@800
+[INFO ] 2025-03-13 13:43:48.130 [main] AccountStepDefinition - Entered credentials successfully: TestUser2964 / Test@800
+[INFO ] 2025-03-13 13:43:48.507 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:43:48.513 [main] AccountStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-13 13:43:48.699 [main] AccountStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-13 13:43:48.710 [main] AccountStepDefinition - Registration success message: Welcome TestUser2964
+[INFO ] 2025-03-13 13:43:48.735 [main] AccountStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-13 13:43:48.903 [main] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-13 13:43:49.403 [main] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-13 13:43:49.541 [main] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-13 13:43:49.723 [main] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-13 13:43:49.981 [main] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-13 13:43:50.340 [main] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-13 13:43:50.601 [main] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-13 13:43:50.853 [main] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-13 13:43:50.860 [main] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-13 13:43:51.102 [main] AccountStepDefinition - Account opened successfully
+[INFO ] 2025-03-13 13:54:17.657 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-13 13:54:19.114 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:54:19.143 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:54:23.700 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:54:25.226 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:54:25.418 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:54:25.421 [main] AccountStepDefinition - Generated Username: TestUser7477
+[INFO ] 2025-03-13 13:54:25.425 [main] AccountStepDefinition - Generated Password: Test@153
+[INFO ] 2025-03-13 13:54:25.917 [main] AccountStepDefinition - Entered credentials successfully: TestUser7477 / Test@153
+[INFO ] 2025-03-13 13:54:26.265 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:54:26.265 [main] AccountStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-13 13:54:26.502 [main] AccountStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-13 13:54:26.527 [main] AccountStepDefinition - Registration success message: Welcome TestUser7477
+[INFO ] 2025-03-13 13:54:26.560 [main] AccountStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-13 13:54:26.752 [main] Loggerload - Login App URL
+[INFO ] 2025-03-13 13:54:27.090 [main] AccountStepDefinition - I am in Login Page
+[INFO ] 2025-03-13 13:54:27.564 [main] AccountStepDefinition - Entering credentials: TestUser7477 / Test@153
+[INFO ] 2025-03-13 13:54:27.707 [main] AccountStepDefinition - Entered credentials successfully.
+[INFO ] 2025-03-13 13:54:27.971 [main] AccountStepDefinition - click login
+[INFO ] 2025-03-13 13:54:27.985 [main] AccountStepDefinition - Check if already logged in, if not, then login
+[INFO ] 2025-03-13 13:54:28.536 [main] AccountStepDefinition - Successfully logged in and navigated to Accounts Overview.
+[INFO ] 2025-03-13 13:54:28.747 [main] AccountStepDefinition - logged in to Para Bank
+[INFO ] 2025-03-13 13:54:28.961 [main] AccountStepDefinition - Successful login
+[INFO ] 2025-03-13 13:54:29.441 [main] Loggerload - Register_App_URL
+[INFO ] 2025-03-13 13:54:29.445 [main] AccountStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-13 13:54:29.796 [main] AccountStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-13 13:54:30.484 [main] AccountStepDefinition - User details filled successfully
+[INFO ] 2025-03-13 13:54:30.665 [main] AccountStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-13 13:54:30.665 [main] AccountStepDefinition - Generated Username: TestUser1569
+[INFO ] 2025-03-13 13:54:30.666 [main] AccountStepDefinition - Generated Password: Test@739
+[INFO ] 2025-03-13 13:54:31.127 [main] AccountStepDefinition - Entered credentials successfully: TestUser1569 / Test@739
+[INFO ] 2025-03-13 13:54:31.351 [main] AccountStepDefinition - Submitting registration form
+[INFO ] 2025-03-13 13:54:31.351 [main] AccountStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-13 13:54:31.586 [main] AccountStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-13 13:54:31.614 [main] AccountStepDefinition - Registration success message: Welcome TestUser1569
+[INFO ] 2025-03-13 13:54:31.641 [main] AccountStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-13 13:54:31.816 [main] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-13 13:54:32.385 [main] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-13 13:54:32.591 [main] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-13 13:54:32.766 [main] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-13 13:54:33.003 [main] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-13 13:54:33.331 [main] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-13 13:54:33.624 [main] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-13 13:54:33.929 [main] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-13 13:54:33.941 [main] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-13 13:54:34.209 [main] AccountStepDefinition - Account opened successfully

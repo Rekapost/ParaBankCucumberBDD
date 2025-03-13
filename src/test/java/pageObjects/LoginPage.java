@@ -37,11 +37,20 @@ public class LoginPage {
 	@FindBy(how=How.XPATH,using="//input[@value='Log In']")
 	@CacheLookup   
 	WebElement loginButton;
+
+	@FindBy(how=How.XPATH,using="//*[@id='leftPanel']/ul/li[8]/a")
+	@CacheLookup
+	WebElement logoutButton;
 	
+
+	public void logout(){
+		logoutButton.click();
+	}
 	public void username(String uname)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		WebElement usernamelField = wait.until(ExpectedConditions.visibilityOf(username));
+		//WebElement usernamelField = wait.until(ExpectedConditions.presenceOfElementLocated(username));
 		usernamelField.sendKeys(uname);
 	}
 	

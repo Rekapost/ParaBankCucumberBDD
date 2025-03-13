@@ -10,27 +10,22 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import utilities.TestData;
 import hooks.hook;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.datafaker.Faker;
-import pageObjects.LoginPage;
-import pageObjects.NewAccountOpenPage;
 import pageObjects.RegisterPage;
 import utilities.ConfigReader;
 
-public class RegisterStepDefinition { 
+public class RegisterStepDefinition {
     private final WebDriver driver;
     ConfigReader readConfig = new ConfigReader();
     public String Register_APP_URL = readConfig.getApplicationRegisterUrl();
-    public String Login_APP_URL = readConfig.getApplicationLoginUrl();
-    static Logger loggerload = LogManager.getLogger(RegisterStepDefinition.class);
+    static Logger loggerload = LogManager.getLogger(AccountStepDefinition.class);
     
     RegisterPage reg;
-    LoginPage lp;
-    NewAccountOpenPage newAccountOpenPage;
     
     public String username;
     public String password;
@@ -41,8 +36,7 @@ public class RegisterStepDefinition {
     public RegisterStepDefinition() {
         this.driver = hook.getDriver();  
         reg = new RegisterPage(driver);
-        lp = new LoginPage(driver);
-        newAccountOpenPage = new NewAccountOpenPage(driver);
+        
     }
 
     @Given("I navigate to {string}")
@@ -69,43 +63,50 @@ public class RegisterStepDefinition {
     }
    
     @Then("I enter {string}, {string}, and {string}")
-    public void i_enter_and(String username, String password, String confPassword) {
-        loggerload.info("Generating random credentials for registration");
-    
-        // Generate test data
-        this.username = "TestUser" + (1000 + new Random().nextInt(9000));
-        this.password = "Test@" + datafaker.number().digits(4);
-        this.confPassword = this.password; 
-        
-        loggerload.info("Generated Username: " + this.username);
-        loggerload.info("Generated Password: " + this.password);
-    
-        reg.enterUsername(this.username);
-        reg.enterPassword(this.password);
-        reg.enterConfirmPassword(this.confPassword + Keys.ENTER);
-        
-        loggerload.info("Entered credentials successfully: " + this.username + " / " + this.password);
-    }
-    
+public void i_enter_and(String username, String password, String confPassword) {
+    loggerload.info("Generating random credentials for registration");
+
+    // Generate test data
+    this.username = "TestUser" + (1000 + new Random().nextInt(9000));
+    this.password = "Test@" + new Random().nextInt(1000);
+    this.confPassword = this.password;
+
+    // Store the credentials globally for use in LoginStepDefinition
+    TestData.username = this.username;
+    TestData.password = this.password;
+
+    // Log the credentials for reference
+    loggerload.info("Generated Username: " + this.username);
+    loggerload.info("Generated Password: " + this.password);
+
+    // Fill in the registration form with the generated credentials
+    reg.enterUsername(this.username);
+    reg.enterPassword(this.password);
+    reg.enterConfirmPassword(this.confPassword + Keys.ENTER);
+
+    // Log the credentials being entered
+    loggerload.info("Entered credentials successfully: " + this.username + " / " + this.password);
+}
+
 
 @When("I submit on Register button")
 public void i_submit_on_register_button() {
     loggerload.info("Submitting registration form");
-/*    try{
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", reg.clickSubmitButton());
-        js.executeScript("arguments[0].click();", reg.clickSubmitButton());
-    } catch (Exception e) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-    wait.until(ExpectedConditions.elementToBeClickable(reg.clickSubmitButton())).click();
-    }
-*/
+        /*    try{
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].scrollIntoView();", reg.clickSubmitButton());
+                js.executeScript("arguments[0].click();", reg.clickSubmitButton());
+            } catch (Exception e) {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            wait.until(ExpectedConditions.elementToBeClickable(reg.clickSubmitButton())).click();
+            }
+        */
     loggerload.info("Registration form submitted successfully.");
 }
 
 
-   @Then("I should be navigated to the login page")
-        public void i_should_be_navigated_to_the_login_page() {
+   @Then("I should be successfully navigated to the accounts page")
+        public void i_should_be_successfully_navigated_to_the_accounts_page() {
             try {
                 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
                 wait.until(ExpectedConditions.or(
@@ -125,51 +126,5 @@ public void i_submit_on_register_button() {
         loggerload.error("Navigation to login page failed: " + driver.getTitle());
         throw new AssertionError("Registration failed! Page title mismatch.");
     }
-}
-
-// ***********************************************************************************
-    @When("In front page i click {string}")
-    public void in_front_page_i_click(String button) {
-        loggerload.info("Clicking on: " + button);
-        newAccountOpenPage.accountOverview();
-        newAccountOpenPage.clickAccountOverview();
-    }
-    /*    // Verify account creation success
-        String accountMessage = newAccountOpenPage.getAccountMessage();
-        loggerload.info("New Account Message: " + accountMessage);   
-        if (!accountMessage.contains("successfully created")) {
-            throw new AssertionError("Failed to create new account.");
-        }
-    */
-    
-
-    @Then("I should see the account creation page")
-    public void i_should_see_the_account_creation_page() {
-        loggerload.info("Navigated to account creation page");
-        newAccountOpenPage.data();
-        loggerload.info("Got all details of the account" );
-
-    }
-    @Then("I open new account")
-    public void i_open_new_account() {
-        loggerload.info("Opening a new bank account");
-    
-        // Click on "Open New Account" button
-        newAccountOpenPage.clickOpenNewAccount();
-        loggerload.info("clicked open new account");
-        newAccountOpenPage.getAccountType();
-        newAccountOpenPage.selectAccountType("SAVINGS");
-        loggerload.info("Selected account type: Savings");
-        newAccountOpenPage.getDepositAmountCondition();
-        newAccountOpenPage.inputDepositAmount("1000");
-        loggerload.info("Input deposit amount: 1000");
-        newAccountOpenPage.openNewAccountForm();
-        loggerload.info("Opened new account form");
-        Assert.assertEquals(driver.getTitle(), "ParaBank | Open Account");
-        loggerload.info("Account created successfully");
-        newAccountOpenPage.getAccountOpenedMessage();
-        newAccountOpenPage.getAccountNumberMessage();
-        loggerload.info("Account opened successfully");
-    }   
-
+  }
 }

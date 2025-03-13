@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/resources/features/",
 		//tags = "@register or @accountopen",
-		tags= "not (@multiplelogin or @login )",
+		//tags= "not (@multiplelogin or @login )",
 		//tags= "not @multiplelogin",
 		glue = {"stepDefinitions","hooks"}, 
 		dryRun = false, 
