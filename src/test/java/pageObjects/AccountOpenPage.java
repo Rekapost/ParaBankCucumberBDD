@@ -52,6 +52,27 @@ public class AccountOpenPage {
     @CacheLookup
     WebElement accountNumberMessage;
 
+    @FindBy(how=How.XPATH,using="//div[@id='showOverview']//tr/td/a")
+    @CacheLookup
+    WebElement clickAccountDetails;
+
+    @FindBy(how=How.XPATH,using="//div[@id='accountDetails']//tr/td")
+    @CacheLookup
+    List<WebElement> accountDetails;
+
+    @FindBy(how=How.XPATH,using="//table[@id='transactionTable']//tr/td")
+    @CacheLookup
+    List<WebElement> TransactionDetails;
+
+    @FindBy(how=How.XPATH,using="//form[@id='activityForm']//td/select[@id='month']/option[1]")
+    @CacheLookup
+    WebElement activityMonthPeriod;
+
+    @FindBy(how=How.XPATH,using="//form[@id='activityForm']//td/select[@id='transactionType']/option[1]")
+    @CacheLookup
+    WebElement activityTransactionType;
+
+
     public AccountOpenPage(WebDriver driver)
 		{   
 			this.driver = driver;
@@ -114,4 +135,27 @@ public class AccountOpenPage {
             return accountNumberMessage.getText();
         }
 
+        public void clickAccountDetails(){
+            clickAccountDetails.click();
+        }
+
+        public void getAccountDetails(){
+            for(WebElement element: accountDetails){
+                System.out.println(element.getText());  
+            }
+        }
+
+        public void getTransactionDetails(){
+            for(WebElement element: TransactionDetails){
+                System.out.println(element.getText());  
+            }
+        }
+
+        public void selectActivityMonthPeriod(){
+            activityMonthPeriod.click();
+        }
+
+        public void selectActivityTransactionType(){
+            activityTransactionType.click();
+        }
 }

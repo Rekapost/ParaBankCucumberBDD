@@ -23,12 +23,13 @@ public class AccountStepDefinition {
         this.driver = hook.getDriver();  
         newAccountOpenPage = new AccountOpenPage(driver);
     }
-@Given("In front page I click {string}")
-public void in_front_page_i_click(String string) {
-        loggerload.info("Clicking on: " + string);
-        newAccountOpenPage.accountOverview();
-        newAccountOpenPage.clickAccountOverview();
-    }
+
+    @Given("In front page I click {string}")
+    public void in_front_page_i_click(String string) {
+            loggerload.info("Clicking on: " + string);
+            newAccountOpenPage.accountOverview();
+            newAccountOpenPage.clickAccountOverview();
+        }
     /*    // Verify account creation success
         String accountMessage = newAccountOpenPage.getAccountMessage();
         loggerload.info("New Account Message: " + accountMessage);   
@@ -37,7 +38,6 @@ public void in_front_page_i_click(String string) {
         }
     */
     
-
         @Then("I should see the account creation page")
         public void i_should_see_the_account_creation_page() {
             loggerload.info("Navigated to account creation page");
@@ -59,13 +59,36 @@ public void in_front_page_i_click(String string) {
             newAccountOpenPage.getAccountType();
             newAccountOpenPage.selectAccountType("SAVINGS");
             loggerload.info("Selected account type: Savings");
+
+        /*  // Open a Savings account
+            newAccountOpenPage.selectAccountType("SAVINGS");
+            loggerload.info("Selected account type: Savings");
+            newAccountOpenPage.inputDepositAmount("1000");
+            newAccountOpenPage.openNewAccountForm();
+            loggerload.info("Created Savings account");
+
+            // Open a Checking account
+            newAccountOpenPage.selectAccountType("CHECKING");
+            loggerload.info("Selected account type: Checking");
+            newAccountOpenPage.inputDepositAmount("1000");
+            newAccountOpenPage.openNewAccountForm();
+            loggerload.info("Created Checking account");
+
+            newAccountOpenPage.clickAccountDetails();
+            loggerload.info("Clicked on account details");
+
+            newAccountOpenPage.getAccountDetails();
+            loggerload.info("Got all details of the account" );
+        */
         }
+
         @Then("I enter deposit ammount")
         public void i_enter_deposit_ammount() {
                 newAccountOpenPage.getDepositAmountCondition();
                 newAccountOpenPage.inputDepositAmount("1000");
                 loggerload.info("Input deposit amount: 1000");
         }
+
         @Then("I create new account")
         public void i_create_new_account() {
                 newAccountOpenPage.openNewAccountForm();
@@ -79,5 +102,4 @@ public void in_front_page_i_click(String string) {
                 newAccountOpenPage.getAccountNumberMessage();
                 loggerload.info("Account opened successfully");
         }
-
 }

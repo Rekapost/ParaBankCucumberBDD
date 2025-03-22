@@ -10,7 +10,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utilities.TestData;
+
 import hooks.hook;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,12 +18,13 @@ import io.cucumber.java.en.When;
 import net.datafaker.Faker;
 import pageObjects.RegisterPage;
 import utilities.ConfigReader;
+import utilities.TestData;
 
 public class RegisterStepDefinition {
     private final WebDriver driver;
     ConfigReader readConfig = new ConfigReader();
     public String Register_APP_URL = readConfig.getApplicationRegisterUrl();
-    static Logger loggerload = LogManager.getLogger(AccountStepDefinition.class);
+    static Logger loggerload = LogManager.getLogger(RegisterStepDefinition.class);
     
     RegisterPage reg;
     

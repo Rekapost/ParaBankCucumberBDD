@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 import hooks.hook;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -19,7 +20,7 @@ public class LoginStepDefinition {
     private final WebDriver driver;
     ConfigReader readConfig = new ConfigReader();
     public String Login_APP_URL = readConfig.getApplicationLoginUrl();
-    static Logger loggerload = LogManager.getLogger(AccountStepDefinition.class);
+    static Logger loggerload = LogManager.getLogger(LoginStepDefinition.class);
     LoginPage lp;
     public LoginStepDefinition() {
         this.driver = hook.getDriver();  
@@ -81,6 +82,5 @@ public class LoginStepDefinition {
             loggerload.error("Failed to login, page title does not match!");
             Assert.fail("Login failed, incorrect page title: " + driver.getTitle());
         }
-    }
-    
+    }  
 }

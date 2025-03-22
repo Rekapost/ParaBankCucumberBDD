@@ -24,9 +24,9 @@ RUN java -version
 RUN echo "JAVA_HOME is set to: $JAVA_HOME"
 COPY ./src/test/resources/ChromeDriver/chromedriver /usr/local/bin/chromedriver
 RUN chmod +x /usr/local/bin/chromedriver
-COPY . /home/BDD-Cucumber
-WORKDIR /home/BDD-Cucumber
-RUN mvn -f /home/BDD-Cucumber/pom.xml clean test -DskipTests=true
+COPY . /home/BDD-Parabank-Cucumber
+WORKDIR /home/BDD-Parabank-Cucumber
+RUN mvn -f /home/BDD-Parabank-Cucumber/pom.xml clean test -DskipTests=true
 EXPOSE 8080
 #CMD ["mvn", "clean", "test"]
 #CMD ["tail", "-f", "/dev/null"]

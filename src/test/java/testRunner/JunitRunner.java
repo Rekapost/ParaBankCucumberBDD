@@ -7,8 +7,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)  
 @CucumberOptions(
-		features = "src/test/resources/features/Login.feature",
-		tags = "@login or @multiplelogin or @sanity or @smoke or @regression",
+		features = "src/test/resources/features/",
+		//tags = "@login or @multiplelogin or @sanity or @smoke or @regression",
 		glue = {"stepDefinitions","hooks"}, 
 		dryRun = false, 
 		monochrome = true,
