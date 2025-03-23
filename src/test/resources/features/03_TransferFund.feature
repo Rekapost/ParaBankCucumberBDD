@@ -1,4 +1,4 @@
-@transferFunds
+@registerTransferFunds
 Feature: I open new account and transfer fund
 
 Background:
@@ -7,7 +7,8 @@ Background:
     And I enter "<Username>", "<Password>", and "<Confirm Password>"	
     When I submit on Register button
     Then I should be successfully navigated to the accounts page
-    
+
+@transferFunds 
 Scenario: Transfer fund to New Account
     Given In front page I click "Open New Account"  
     Then I should see the account creation page
@@ -16,6 +17,7 @@ Scenario: Transfer fund to New Account
     Then I enter deposit ammount
     And I create new account
     Then I get success message for account creation
+   
     Given I click TransferFunds
     Then I enter amount to transfer
     Then I select From account and To account

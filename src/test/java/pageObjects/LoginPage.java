@@ -1,6 +1,6 @@
 package pageObjects;
 import java.time.Duration;
-
+import utilities.BrowserUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -13,12 +13,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginPage {
 	
 	public  static WebDriver driver;	
-	 
-	//using constructor to initialze webelements in pagefactory	
+	private WebDriverWait wait; 
+	BrowserUtility browserUtility;
+		//using constructor to initialze webelements in pagefactory	
 		public LoginPage(WebDriver driver)
 		{   
 			this.driver = driver;
+			browserUtility = new BrowserUtility(driver);
 			PageFactory.initElements(driver, this);
+			this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		}
 	
 //  What is CacheLookup in Selenium?
@@ -44,11 +47,12 @@ public class LoginPage {
 	
 
 	public void logout(){
-		logoutButton.click();
+		//logoutButton.click();
+		browserUtility.clickOn(logoutButton);
 	}
 	public void username(String uname)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		
 		WebElement usernamelField = wait.until(ExpectedConditions.visibilityOf(username));
 		//WebElement usernamelField = wait.until(ExpectedConditions.presenceOfElementLocated(username));
 		usernamelField.sendKeys(uname);
@@ -60,10 +64,10 @@ public class LoginPage {
 		}
 	
 	public void login()
-		{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		{	
         WebElement login =wait.until(ExpectedConditions.elementToBeClickable(loginButton));
-		login.click();		
+		browserUtility.clickOn(login);
+		//login.click();		
 	  }
 	
 	public void loginDDT(String userName, String passWord) throws InterruptedException {			
@@ -71,6 +75,7 @@ public class LoginPage {
 		username.sendKeys(userName);
 		password.clear();
 		password.sendKeys(passWord);
-		loginButton.click();
+		//loginButton.click();
+		browserUtility.clickOn(loginButton);
 	}
 }

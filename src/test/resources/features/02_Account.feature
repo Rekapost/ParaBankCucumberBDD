@@ -1,4 +1,4 @@
-@account
+@registerOpenAccount
 Feature: I open new account 
 Open New Account in Para Bank
 
@@ -9,7 +9,7 @@ Background:
     When I submit on Register button
     Then I should be successfully navigated to the accounts page
 
-
+@openAccount
 Scenario: Open New Account
     Given In front page I click "Open New Account"  
     Then I should see the account creation page

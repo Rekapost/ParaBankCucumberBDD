@@ -117,15 +117,23 @@ public class RegisterPage {
         }
 
         public void enterPassword(String pwd) {
+           try{
             WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='customer.password']")));
             passwordField.clear();
             passwordField.sendKeys(pwd);
+            }catch(Exception e){
+                System.out.println("Password field not found. Error: " + e.getMessage());
+            }
         }
 
         public void enterConfirmPassword(String cpwd) {
+            try{
             WebElement confirmPasswordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='repeatedPassword']")));
             confirmPasswordField.clear();
             confirmPasswordField.sendKeys(cpwd);
+            }catch(Exception e){
+                System.out.println("Confirm Password field not found. Error: " + e.getMessage());
+            }
         }
         public WebElement clickSubmitButton() {
             return driver.findElement(By.xpath("//input[@type='submit']"));

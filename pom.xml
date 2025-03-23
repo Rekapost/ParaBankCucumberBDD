@@ -16,7 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <suiteXmlFile>./src/test/resources/testng/testng.xml</suiteXmlFile> 
+       <suiteXmlFile>./src/test/resources/testng/testng.xml</suiteXmlFile> 
+       <!--  <suiteXmlFile>./src/test/resources/testng/paralleltestng.xml</suiteXmlFile> --> 
     </properties>
     <repositories>
         <repository>
@@ -51,7 +52,7 @@
                     <forkCount>1</forkCount>
                     <reuseForks>true</reuseForks>
                     <suiteXmlFiles>${suiteXmlFile}</suiteXmlFiles>
-                </configuration> 								  	   
+                </configuration>                 								  	   
             </plugin>
             <plugin>
                 <groupId>io.qameta.allure</groupId>
@@ -75,6 +76,7 @@
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.9.1.2184</version>
             </plugin>
+            
         </plugins>
     </build>
     <dependencies>
