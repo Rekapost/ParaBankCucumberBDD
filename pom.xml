@@ -14,10 +14,8 @@
 
   <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-       <suiteXmlFile>./src/test/resources/testng/testng.xml</suiteXmlFile> 
-       <!--  <suiteXmlFile>./src/test/resources/testng/paralleltestng.xml</suiteXmlFile> --> 
+      <!-- <suiteXmlFile>./src/test/resources/testng/testng.xml</suiteXmlFile> -->
+         <suiteXmlFile>./src/test/resources/testng/testng.xml,./src/test/resources/testng/paralleltestng.xml</suiteXmlFile>  
     </properties>
     <repositories>
         <repository>
@@ -34,9 +32,9 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <!--     <source>11</source>
-                             <target>11</target> -->
-                    <!-- <release>11</release> -->
+                         <source>11</source>
+                             <target>11</target> 
+                    <release>11</release> 
                     <compilerArgs>
                         <arg>-Xlint:-options</arg>
                         <arg>-Xlint:deprecation</arg>
@@ -47,11 +45,31 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
-<!-- Run test through testng.xml file -->
+<!-- Run test through testRunner folder having testrunner files	for parallel execution -->
                  <configuration>
+                  <!-- This configures parallel execution at the class level -->
+                    <parallel>classes</parallel> <!-- You can change this to 'methods'/'classes' for parallel method execution -->
+
+                    <!-- This controls the number of threads running the tests in parallel -->
+                    <threadCount>4</threadCount> <!-- Adjust the number of threads based on available resources -->
+                    <includes>
+						<include>testRunner/*.java</include>
+					</includes> 
+                    <systemPropertyVariables>					
+			            <!-- <cucumber.filter.tags>@SmokeTest</cucumber.filter.tags> -->
+					</systemPropertyVariables>
+					<argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+<!-- Run test through testng.xml file -->
+                    <!-- Number of forks to use. Set it to 1 for a single process. Increase for better parallelization. -->
                     <forkCount>1</forkCount>
+
+                    <!-- Whether or not to reuse forks between tests -->
                     <reuseForks>true</reuseForks>
-                    <suiteXmlFiles>${suiteXmlFile}</suiteXmlFiles>
+
+                    <!-- Specify the location of your TestNG suite XML file, which lists the tests to run -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>                 								  	   
             </plugin>
             <plugin>

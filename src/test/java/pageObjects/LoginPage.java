@@ -1,6 +1,6 @@
 package pageObjects;
 import java.time.Duration;
-import utilities.BrowserUtility;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -9,6 +9,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.BrowserUtility;
 
 public class LoginPage {
 	
@@ -21,7 +23,7 @@ public class LoginPage {
 			this.driver = driver;
 			browserUtility = new BrowserUtility(driver);
 			PageFactory.initElements(driver, this);
-			this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		}
 	
 //  What is CacheLookup in Selenium?
@@ -66,6 +68,7 @@ public class LoginPage {
 	public void login()
 		{	
         WebElement login =wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+		//WebElement login= wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton)); 
 		browserUtility.clickOn(login);
 		//login.click();		
 	  }

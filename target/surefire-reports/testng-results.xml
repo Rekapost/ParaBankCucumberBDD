@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-24T11:15:21 CDT" name="Suite" finished-at="2025-03-24T11:15:22 CDT" duration-ms="1087">
+    <groups>
+    </groups>
+    <test started-at="2025-03-24T11:15:21 CDT" name="Test" finished-at="2025-03-24T11:15:22 CDT" duration-ms="1087">
+      <class name="testRunner.TestNgRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestNgRunner@5e2f3be5]" started-at="2025-03-24T11:15:21 CDT" name="setUpClass" finished-at="2025-03-24T11:15:22 CDT" duration-ms="527" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@53a665ad]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testRunner.TestNgRunner@5e2f3be5]" started-at="2025-03-24T11:15:22 CDT" name="setUp" finished-at="2025-03-24T11:15:22 CDT" duration-ms="274" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@5e2f3be5]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="66" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open New Account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I open new account"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@5e2f3be5]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="66" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Transfer fund to New Account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I open new account and transfer fund"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@5e2f3be5]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="66" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with credentails"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register in to the website"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@5e2f3be5]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="66" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open New Account and Apply for Loan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I request loan from the bank"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.TestNgRunner@5e2f3be5]" started-at="2025-03-24T11:15:22 CDT" name="tearDown" finished-at="2025-03-24T11:15:22 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestNgRunner@5e2f3be5]" started-at="2025-03-24T11:15:22 CDT" name="tearDownClass" finished-at="2025-03-24T11:15:22 CDT" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.TestNgRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+  <suite started-at="2025-03-24T11:15:22 CDT" name="Cross Browser Suite and Cucumber Parallel Suite" finished-at="2025-03-24T11:15:22 CDT" duration-ms="143">
+    <groups>
+    </groups>
+    <test started-at="2025-03-24T11:15:22 CDT" name="Firefox TestNgRunner Testng" finished-at="2025-03-24T11:15:22 CDT" duration-ms="77">
+      <class name="testRunner.TestNgRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestNgRunner@3cae7b8b]" started-at="2025-03-24T11:15:22 CDT" name="setUpClass" finished-at="2025-03-24T11:15:22 CDT" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2c0b4c83]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testRunner.TestNgRunner@3cae7b8b]" started-at="2025-03-24T11:15:22 CDT" name="setUp" finished-at="2025-03-24T11:15:22 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@3cae7b8b]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open New Account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I open new account"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@3cae7b8b]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with credentails"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register in to the website"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@3cae7b8b]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Transfer fund to New Account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I open new account and transfer fund"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@3cae7b8b]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open New Account and Apply for Loan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I request loan from the bank"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.TestNgRunner@3cae7b8b]" started-at="2025-03-24T11:15:22 CDT" name="tearDown" finished-at="2025-03-24T11:15:22 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestNgRunner@3cae7b8b]" started-at="2025-03-24T11:15:22 CDT" name="tearDownClass" finished-at="2025-03-24T11:15:22 CDT" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.TestNgRunner -->
+    </test> <!-- Firefox TestNgRunner Testng -->
+    <test started-at="2025-03-24T11:15:22 CDT" name="Edge TestNgRunner Testng" finished-at="2025-03-24T11:15:22 CDT" duration-ms="60">
+      <class name="testRunner.TestNgRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestNgRunner@2aeefcc]" started-at="2025-03-24T11:15:22 CDT" name="setUpClass" finished-at="2025-03-24T11:15:22 CDT" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@78525ef9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testRunner.TestNgRunner@2aeefcc]" started-at="2025-03-24T11:15:22 CDT" name="setUp" finished-at="2025-03-24T11:15:22 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@2aeefcc]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Transfer fund to New Account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I open new account and transfer fund"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@2aeefcc]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with credentails"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register in to the website"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@2aeefcc]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open New Account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I open new account"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNgRunner@2aeefcc]" started-at="2025-03-24T11:15:22 CDT" name="runScenario" data-provider="scenarios" finished-at="2025-03-24T11:15:22 CDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open New Account and Apply for Loan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["I request loan from the bank"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunner.TestNgRunner@2aeefcc]" started-at="2025-03-24T11:15:22 CDT" name="tearDown" finished-at="2025-03-24T11:15:22 CDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestNgRunner@2aeefcc]" started-at="2025-03-24T11:15:22 CDT" name="tearDownClass" finished-at="2025-03-24T11:15:22 CDT" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.TestNgRunner -->
+    </test> <!-- Edge TestNgRunner Testng -->
+  </suite> <!-- Cross Browser Suite and Cucumber Parallel Suite -->
+</testng-results>

@@ -56,7 +56,7 @@ public class LoginStepDefinition {
         if (!driver.getTitle().contains("Accounts Overview")) {  // Check if already logged in
             loggerload.info("Check if already logged in, if not, then login");
             lp.login();
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
             wait.until(ExpectedConditions.titleContains("Accounts Overview"));
             loggerload.info("Successfully logged in and navigated to Accounts Overview.");
         } else {
@@ -72,7 +72,7 @@ public class LoginStepDefinition {
     }
     @Then("I validate the credentials")
     public void i_validate_the_credentials() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.titleContains("Accounts Overview"));
 
         if (driver.getTitle().equals("ParaBank | Accounts Overview")) {

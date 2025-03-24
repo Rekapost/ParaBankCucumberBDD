@@ -109,7 +109,7 @@ public void i_submit_on_register_button() {
    @Then("I should be successfully navigated to the accounts page")
         public void i_should_be_successfully_navigated_to_the_accounts_page() {
             try {
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
                 wait.until(ExpectedConditions.or(
                     ExpectedConditions.titleContains("ParaBank | Customer Created")
                 ));

@@ -1,5 +1,9 @@
 package hooks;
+
 import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -12,100 +16,60 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class hook {
-    private static WebDriver driver;  // ThreadLocal WebDriver will be used in WebDriverFactory
-    File sourceFile ;
-   
-    /* public hook() {
-    }
-   */ 
-  
+    private static WebDriver driver;
+
     @Before
-    public void setUp() {
-        // Initialize WebDriver based on the browser passed as a parameter
-        // Get the browser parameter from system properties or use default value
-        //String browser = System.getProperty("browser", "chrome");  // Default to chrome if not provided
-        //String browser = System.getProperty("browser");  // Get browser parameter
-        //driver = WebDriverFactory.getDriver(browser); // Get the WebDriver instance based on browser
-        driver = WebDriverFactory.getDriver();
+    public void setUp(Scenario scenario) {
+        // Retrieve the browser value from system properties or set a default
+        String browser = System.getProperty("browser", "chrome"); // Default to "chrome" if not provided
+        driver = WebDriverFactory.getDriver(browser); // Get the WebDriver instance
+        System.out.println("Starting scenario: " + scenario.getName());
     }
-   @After
-    public  void tearDown() {
-        // Close the driver using WebDriverFactory to handle thread-local driver
+
+    // Public method to return the driver
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
+    @After
+    public void tearDown(Scenario scenario) {
+        // Ensure the driver has not been quit already and it's safe to close
         if (driver != null) {
-            //driver.quit();  // Close the browser
-            WebDriverFactory.quitDriver(); // Ensure cleanup in WebDriverFactory
+            System.out.println("Finished scenario: " + scenario.getName());
+            if (scenario.isFailed()) {
+                System.out.println("Scenario failed: " + scenario.getName());
+            }
+
+            // Cleanup WebDriver instance (make sure it's a thread-local driver)
+            WebDriverFactory.quitDriver(); // This ensures the correct driver cleanup
             System.out.println("Teardown: Browser closed.");
         }
     }
 
     @AfterStep
-    public void attachScreenshot(Scenario scenario) throws Exception {
-        TakesScreenshot screenshot = (TakesScreenshot) driver;
-        sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
-        if (scenario.isFailed()) {
-            System.out.println("Test failed, attaching screenshot");
-            // Take screenshot and embed it
-            String screenshotPath = System.getProperty("user.dir") + "/FailedScreenshots/" + scenario.getName() + ".png";
-            //File destinationFile = new File("./target/reports/Screenshots/" + testName + ".png");
-            File destinationFile = new File(screenshotPath);   
+    public void attachScreenshot(Scenario scenario) throws IOException {
+        if (driver instanceof TakesScreenshot) {
+            TakesScreenshot screenshot = (TakesScreenshot) driver;
+            File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
+
+            // Use timestamp for unique screenshot names
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String screenshotDirectory = scenario.isFailed() ? "/FailedScreenshots/" : "/Screenshots/";
+
+            // Ensure the directories exist
+            File screenshotDir = new File(System.getProperty("user.dir") + screenshotDirectory);
+            if (!screenshotDir.exists()) {
+                screenshotDir.mkdirs();
+            }
+
+            String screenshotPath = System.getProperty("user.dir") + screenshotDirectory + scenario.getName() + "_" + timestamp + ".png";
+            File destinationFile = new File(screenshotPath);
+
+            // Copy the screenshot to the destination
             FileUtils.copyFile(sourceFile, destinationFile);
-        } else {
-            System.out.println("Test passed");
-            sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
-            String screenshotPath = System.getProperty("user.dir") + "/Screenshots/" + scenario.getName() + ".png";
-            //File destinationFile = new File("./target/reports/Screenshots/" + testName + ".png");
-            File destinationFile = new File(screenshotPath);   
-            FileUtils.copyFile(sourceFile, destinationFile);
+
+            System.out.println("Screenshot saved to: " + screenshotPath);
         }
     }
 
-    public static WebDriver getDriver() {
-        return driver;
-    }
-
-/*    @AfterAll
-        public void openHtmlReport(){
-            // Generate HTML report here
-            try { 
-                File htmlReportFile = new File("/target/chaintest/Index.html");
-                if(htmlReportFile.exists()){
-                    Desktop.getDesktop().browse(htmlReportFile.toURI());
-                }else{
-                    System.out.println("Report file not found:" + htmlReportFile.getAbsolutePath());
-                    }
-                }catch(IOException e){
-                System.out.println("Report File not found");
-            }
-       
-            //Allure
-            try{
-                ProcessBuilder builder = new ProcessBuilder("/usr/local/bin/allure", "serve", "allure-results");
-                builder.inheritIO();
-                Process process= builder.start();
-                process.waitFor();
-
-                //allure serve cmd automatically opnes report in browser
-                System.out.println("Report File found");
-            }catch(Exception e){
-                System.out.println("Report File not found");
-            }
-        }
-
-		@BeforeAll
-		public void startDockerGrid() throws IOException, InterruptedException
-		{
-			Runtime.getRuntime().exec("cmd /c start startDockerGrid.bat");
-			Thread.sleep(15000);
-		}
-	
-		@AfterAll
-		public void stopDockerGrid() throws IOException, InterruptedException
-		{
-			Runtime.getRuntime().exec("cmd /c start stopDockerGrid.bat");
-			Thread.sleep(15000);
-			
-			Runtime.getRuntime().exec("taskkill /f /im cmd.exe"); // kills all process closes command prompt
-		}	
-*/
 }
-
