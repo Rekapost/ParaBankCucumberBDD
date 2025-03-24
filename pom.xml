@@ -16,8 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-       <suiteXmlFile>./src/test/resources/testng/testng.xml</suiteXmlFile> 
-       <!--  <suiteXmlFile>./src/test/resources/testng/paralleltestng.xml</suiteXmlFile> --> 
+       <suiteXmlFile>./src/test/resources/testng/testng.xml,./src/test/resources/testng/paralleltestng.xml</suiteXmlFile> 
+        <!-- <suiteXmlFile>./src/test/resources/testng/testng.xml</suiteXmlFile>  -->
     </properties>
     <repositories>
         <repository>
@@ -51,7 +51,17 @@
                  <configuration>
                     <forkCount>1</forkCount>
                     <reuseForks>true</reuseForks>
-                    <suiteXmlFiles>${suiteXmlFile}</suiteXmlFiles>
+                    <suiteXmlFiles>${suiteXmlFile}</suiteXmlFiles> 
+<!-- Run test through testRunner folder having testrunner files	for parallel execution -->
+		            <parallel>classes</parallel>  <!-- or classes / both -->
+					<threadCount>4</threadCount>  <!-- Number of threads to use -->
+					<includes>
+						<include>testRunner/Test*.java</include>
+					</includes>     		
+					<systemPropertyVariables>					
+			            <!-- <cucumber.filter.tags>@SmokeTest</cucumber.filter.tags> -->
+					</systemPropertyVariables>
+					<argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
                 </configuration>                 								  	   
             </plugin>
             <plugin>
@@ -76,7 +86,21 @@
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.9.1.2184</version>
             </plugin>
-            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>testRunner.TestNgRunner, testRunner.JunitRunner</mainClass>
+                </configuration>
+        </plugin>  
         </plugins>
     </build>
     <dependencies>
@@ -144,6 +168,18 @@
             <artifactId>poi</artifactId>
             <version>5.2.2</version>
         </dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-edge-driver</artifactId>
+    <version>4.1.0</version> <!-- Make sure this version is compatible -->
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-firefox-driver</artifactId>
+    <version>4.1.0</version> <!-- Make sure this version is compatible -->
+</dependency>
 
         <dependency>
             <groupId>commons-io</groupId>

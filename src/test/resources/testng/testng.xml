@@ -9,7 +9,7 @@
   <test name="Test">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="testRunner.TestNgRunner"/>
+      <class name="testRunner.TestJunitRunner"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

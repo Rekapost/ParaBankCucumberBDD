@@ -1,138 +1,276 @@
-[INFO ] 2025-03-23 14:46:47.167 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-23 14:46:48.608 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-23 14:46:48.642 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-23 14:46:50.390 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-23 14:46:51.312 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-23 14:46:51.734 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-23 14:46:51.735 [main] RegisterStepDefinition - Generated Username: TestUser3281
-[INFO ] 2025-03-23 14:46:51.738 [main] RegisterStepDefinition - Generated Password: Test@905
-[INFO ] 2025-03-23 14:46:52.398 [main] RegisterStepDefinition - Entered credentials successfully: TestUser3281 / Test@905
-[INFO ] 2025-03-23 14:46:52.790 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-23 14:46:52.791 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-23 14:46:53.145 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-23 14:46:53.172 [main] RegisterStepDefinition - Registration success message: Welcome TestUser3281
-[INFO ] 2025-03-23 14:46:53.193 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-23 14:46:53.528 [main] Loggerload - Login App URL
-[INFO ] 2025-03-23 14:46:53.531 [main] Loggerload - Element found and now performing Click
-[INFO ] 2025-03-23 14:46:53.979 [main] LoginStepDefinition - I am in Login Page
-[INFO ] 2025-03-23 14:46:54.507 [main] LoginStepDefinition - Entering credentials: TestUser3281 / Test@905
-[INFO ] 2025-03-23 14:46:54.653 [main] LoginStepDefinition - Entered credentials successfully.
-[INFO ] 2025-03-23 14:46:55.061 [main] LoginStepDefinition - click login
-[INFO ] 2025-03-23 14:46:55.066 [main] LoginStepDefinition - Check if already logged in, if not, then login
-[INFO ] 2025-03-23 14:46:55.100 [main] Loggerload - Element found and now performing Click
-[INFO ] 2025-03-23 14:46:55.604 [main] LoginStepDefinition - Successfully logged in and navigated to Accounts Overview.
-[INFO ] 2025-03-23 14:46:55.980 [main] LoginStepDefinition - logged in to Para Bank
-[INFO ] 2025-03-23 14:46:56.329 [main] LoginStepDefinition - Successful login
-[INFO ] 2025-03-23 14:46:56.821 [main] WebDriverFactory - WebDriver initialized: null
-[INFO ] 2025-03-23 14:46:56.821 [main] WebDriverFactory - WebDriver quit: null
-[INFO ] 2025-03-23 14:46:56.822 [main] WebDriverFactory - WebDriver closed.
-[INFO ] 2025-03-23 14:46:56.916 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-23 14:46:57.646 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-23 14:46:57.646 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-23 14:46:59.067 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-23 14:46:59.684 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-23 14:47:00.056 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-23 14:47:00.056 [main] RegisterStepDefinition - Generated Username: TestUser2315
-[INFO ] 2025-03-23 14:47:00.056 [main] RegisterStepDefinition - Generated Password: Test@883
-[INFO ] 2025-03-23 14:47:00.640 [main] RegisterStepDefinition - Entered credentials successfully: TestUser2315 / Test@883
-[INFO ] 2025-03-23 14:47:01.052 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-23 14:47:01.052 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-23 14:47:01.434 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-23 14:47:01.483 [main] RegisterStepDefinition - Registration success message: Welcome TestUser2315
-[INFO ] 2025-03-23 14:47:01.506 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-23 14:47:01.864 [main] AccountStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-23 14:47:02.631 [main] AccountStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-23 14:47:02.726 [main] AccountStepDefinition - Got all details of the account
-[INFO ] 2025-03-23 14:47:03.061 [main] AccountStepDefinition - Opening a new bank account
-[INFO ] 2025-03-23 14:47:03.286 [main] AccountStepDefinition - clicked open new account
-[INFO ] 2025-03-23 14:47:03.815 [main] AccountStepDefinition - Selected account type: Savings
-[INFO ] 2025-03-23 14:47:04.258 [main] AccountStepDefinition - Input deposit amount: 1000
-[INFO ] 2025-03-23 14:47:04.692 [main] AccountStepDefinition - Opened new account form
-[INFO ] 2025-03-23 14:47:04.703 [main] AccountStepDefinition - Account created successfully
-[INFO ] 2025-03-23 14:47:05.123 [main] AccountStepDefinition - Account opened successfully
-[INFO ] 2025-03-23 14:47:05.606 [main] WebDriverFactory - WebDriver initialized: null
-[INFO ] 2025-03-23 14:47:05.607 [main] WebDriverFactory - WebDriver quit: null
-[INFO ] 2025-03-23 14:47:05.607 [main] WebDriverFactory - WebDriver closed.
-[INFO ] 2025-03-23 14:47:05.624 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-23 14:47:06.351 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-23 14:47:06.352 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-23 14:47:07.550 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-23 14:47:08.165 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-23 14:47:08.530 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-23 14:47:08.530 [main] RegisterStepDefinition - Generated Username: TestUser9966
-[INFO ] 2025-03-23 14:47:08.530 [main] RegisterStepDefinition - Generated Password: Test@305
-[INFO ] 2025-03-23 14:47:09.224 [main] RegisterStepDefinition - Entered credentials successfully: TestUser9966 / Test@305
-[INFO ] 2025-03-23 14:47:09.701 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-23 14:47:09.701 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-23 14:47:10.045 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-23 14:47:10.070 [main] RegisterStepDefinition - Registration success message: Welcome TestUser9966
-[INFO ] 2025-03-23 14:47:10.094 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-23 14:47:10.424 [main] AccountStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-23 14:47:11.160 [main] AccountStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-23 14:47:11.235 [main] AccountStepDefinition - Got all details of the account
-[INFO ] 2025-03-23 14:47:11.575 [main] AccountStepDefinition - Opening a new bank account
-[INFO ] 2025-03-23 14:47:11.828 [main] AccountStepDefinition - clicked open new account
-[INFO ] 2025-03-23 14:47:12.392 [main] AccountStepDefinition - Selected account type: Savings
-[INFO ] 2025-03-23 14:47:12.831 [main] AccountStepDefinition - Input deposit amount: 1000
-[INFO ] 2025-03-23 14:47:13.253 [main] AccountStepDefinition - Opened new account form
-[INFO ] 2025-03-23 14:47:13.258 [main] AccountStepDefinition - Account created successfully
-[INFO ] 2025-03-23 14:47:13.648 [main] AccountStepDefinition - Account opened successfully
-[INFO ] 2025-03-23 14:47:13.990 [main] TransferFundsStepDefinition - Clicking on Transfer Funds
-[INFO ] 2025-03-23 14:47:14.576 [main] TransferFundsStepDefinition - Enter amount to transfer
-[INFO ] 2025-03-23 14:47:15.003 [main] TransferFundsStepDefinition - Selecting From and To account
-[INFO ] 2025-03-23 14:47:15.437 [main] TransferFundsStepDefinition - Clicking on Transfer button
-[INFO ] 2025-03-23 14:47:15.896 [main] TransferFundsStepDefinition - Verifying Transfer success message
-[INFO ] 2025-03-23 14:47:17.651 [main] WebDriverFactory - WebDriver initialized: null
-[INFO ] 2025-03-23 14:47:17.652 [main] WebDriverFactory - WebDriver quit: null
-[INFO ] 2025-03-23 14:47:17.652 [main] WebDriverFactory - WebDriver closed.
-[INFO ] 2025-03-23 14:47:17.675 [main] WebDriverFactory - Initializing WebDriver for browser: chrome
-[INFO ] 2025-03-23 14:47:18.381 [main] Loggerload - Register_App_URL
-[INFO ] 2025-03-23 14:47:18.382 [main] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
-[INFO ] 2025-03-23 14:47:19.343 [main] RegisterStepDefinition - Filling user details on registration form
-[INFO ] 2025-03-23 14:47:19.865 [main] RegisterStepDefinition - User details filled successfully
-[INFO ] 2025-03-23 14:47:20.209 [main] RegisterStepDefinition - Generating random credentials for registration
-[INFO ] 2025-03-23 14:47:20.210 [main] RegisterStepDefinition - Generated Username: TestUser8285
-[INFO ] 2025-03-23 14:47:20.210 [main] RegisterStepDefinition - Generated Password: Test@190
-[INFO ] 2025-03-23 14:47:20.801 [main] RegisterStepDefinition - Entered credentials successfully: TestUser8285 / Test@190
-[INFO ] 2025-03-23 14:47:21.293 [main] RegisterStepDefinition - Submitting registration form
-[INFO ] 2025-03-23 14:47:21.293 [main] RegisterStepDefinition - Registration form submitted successfully.
-[INFO ] 2025-03-23 14:47:21.639 [main] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
-[INFO ] 2025-03-23 14:47:21.673 [main] RegisterStepDefinition - Registration success message: Welcome TestUser8285
-[INFO ] 2025-03-23 14:47:21.697 [main] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
-[INFO ] 2025-03-23 14:47:22.020 [main] AccountStepDefinition - Clicking on: Open New Account
-[INFO ] 2025-03-23 14:47:22.679 [main] AccountStepDefinition - Navigated to account creation page
-[INFO ] 2025-03-23 14:47:22.741 [main] AccountStepDefinition - Got all details of the account
-[INFO ] 2025-03-23 14:47:23.095 [main] AccountStepDefinition - Opening a new bank account
-[INFO ] 2025-03-23 14:47:23.286 [main] AccountStepDefinition - clicked open new account
-[INFO ] 2025-03-23 14:47:23.797 [main] AccountStepDefinition - Selected account type: Savings
-[INFO ] 2025-03-23 14:47:24.218 [main] AccountStepDefinition - Input deposit amount: 1000
-[INFO ] 2025-03-23 14:47:24.626 [main] AccountStepDefinition - Opened new account form
-[INFO ] 2025-03-23 14:47:24.632 [main] AccountStepDefinition - Account created successfully
-[INFO ] 2025-03-23 14:47:25.031 [main] AccountStepDefinition - Account opened successfully
-[INFO ] 2025-03-23 14:47:25.359 [main] RequestLoanStepDefinition - Clicking on Request Loan
-[INFO ] 2025-03-23 14:47:25.634 [main] RequestLoanPage - Clicked on Request Loan
-[INFO ] 2025-03-23 14:47:26.042 [main] RequestLoanStepDefinition - Entering loan amount
-[INFO ] 2025-03-23 14:47:26.107 [main] RequestLoanPage - Entered loan amount : 10000
-[INFO ] 2025-03-23 14:47:26.472 [main] RequestLoanStepDefinition - Entering down payment amount
-[INFO ] 2025-03-23 14:47:26.520 [main] RequestLoanPage - Entered down payment amount : 1000
-[INFO ] 2025-03-23 14:47:26.872 [main] RequestLoanStepDefinition - Selecting From Account
-[INFO ] 2025-03-23 14:47:26.915 [main] RequestLoanPage - Clicked on the first option: 42759
-[INFO ] 2025-03-23 14:47:27.237 [main] RequestLoanStepDefinition - Submitting loan request
-[INFO ] 2025-03-23 14:47:27.303 [main] RequestLoanPage - Clicked on Apply Now button
-[INFO ] 2025-03-23 14:47:27.683 [main] RequestLoanPage - Loan Status: Denied
-[INFO ] 2025-03-23 14:47:27.691 [main] RequestLoanPage - Loan Denied
-[INFO ] 2025-03-23 14:47:27.699 [main] RequestLoanStepDefinition - Loan request denied
-[INFO ] 2025-03-23 14:47:27.726 [main] RequestLoanPage - Loan Message: Loan Request Processed
-[INFO ] 2025-03-23 14:47:27.753 [main] RequestLoanPage - Loan Provider:
-[INFO ] 2025-03-23 14:47:27.768 [main] RequestLoanPage - Wealth Securities Dynamic Loans (WSDL)
-[INFO ] 2025-03-23 14:47:27.783 [main] RequestLoanPage - Date:
-[INFO ] 2025-03-23 14:47:27.835 [main] RequestLoanPage - 03-23-2025
-[INFO ] 2025-03-23 14:47:27.854 [main] RequestLoanPage - Status:
-[INFO ] 2025-03-23 14:47:27.870 [main] RequestLoanPage - Denied
-[INFO ] 2025-03-23 14:47:27.890 [main] RequestLoanPage - Loan Status: Denied
-[INFO ] 2025-03-23 14:47:27.901 [main] RequestLoanPage - Loan Denied
-[INFO ] 2025-03-23 14:47:27.939 [main] RequestLoanPage - 
-[INFO ] 2025-03-23 14:47:27.950 [main] RequestLoanPage - 
-[INFO ] 2025-03-23 14:47:28.430 [main] WebDriverFactory - WebDriver initialized: null
-[INFO ] 2025-03-23 14:47:28.431 [main] WebDriverFactory - WebDriver quit: null
-[INFO ] 2025-03-23 14:47:28.431 [main] WebDriverFactory - WebDriver closed.
+[INFO ] 2025-03-24 15:57:41.075 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-24 15:57:42.794 [TestNG-test-Chrome TestNgRunner Testng-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-24 15:57:42.817 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-24 15:57:44.845 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-24 15:57:45.611 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - User details filled successfully
+[INFO ] 2025-03-24 15:57:45.885 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-24 15:57:45.886 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generated Username: TestUser7118
+[INFO ] 2025-03-24 15:57:45.886 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generated Password: Test@265
+[INFO ] 2025-03-24 15:57:46.413 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Entered credentials successfully: TestUser7118 / Test@265
+[INFO ] 2025-03-24 15:57:46.854 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Submitting registration form
+[INFO ] 2025-03-24 15:57:46.854 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-24 15:57:47.181 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-24 15:57:47.201 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Welcome TestUser7118
+[INFO ] 2025-03-24 15:57:47.216 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-24 15:57:47.484 [TestNG-test-Chrome TestNgRunner Testng-1] Loggerload - Login App URL
+[INFO ] 2025-03-24 15:57:47.487 [TestNG-test-Chrome TestNgRunner Testng-1] Loggerload - Element found and now performing Click
+[INFO ] 2025-03-24 15:57:47.773 [TestNG-test-Chrome TestNgRunner Testng-1] LoginStepDefinition - I am in Login Page
+[INFO ] 2025-03-24 15:57:48.265 [TestNG-test-Chrome TestNgRunner Testng-1] LoginStepDefinition - Entering credentials: TestUser7118 / Test@265
+[INFO ] 2025-03-24 15:57:48.384 [TestNG-test-Chrome TestNgRunner Testng-1] LoginStepDefinition - Entered credentials successfully.
+[INFO ] 2025-03-24 15:57:48.693 [TestNG-test-Chrome TestNgRunner Testng-1] LoginStepDefinition - click login
+[INFO ] 2025-03-24 15:57:48.699 [TestNG-test-Chrome TestNgRunner Testng-1] LoginStepDefinition - Check if already logged in, if not, then login
+[INFO ] 2025-03-24 15:57:48.788 [TestNG-test-Chrome TestNgRunner Testng-1] Loggerload - Element found and now performing Click
+[INFO ] 2025-03-24 15:57:49.247 [TestNG-test-Chrome TestNgRunner Testng-1] LoginStepDefinition - Successfully logged in and navigated to Accounts Overview.
+[INFO ] 2025-03-24 15:57:49.569 [TestNG-test-Chrome TestNgRunner Testng-1] LoginStepDefinition - logged in to Para Bank
+[INFO ] 2025-03-24 15:57:49.857 [TestNG-test-Chrome TestNgRunner Testng-1] LoginStepDefinition - Successful login
+[INFO ] 2025-03-24 15:57:50.290 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver initialized: null
+[INFO ] 2025-03-24 15:57:50.291 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver quit: null
+[INFO ] 2025-03-24 15:57:50.291 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver closed.
+[INFO ] 2025-03-24 15:57:50.323 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-24 15:57:51.028 [TestNG-test-Chrome TestNgRunner Testng-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-24 15:57:51.028 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-24 15:57:52.135 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-24 15:57:52.543 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - User details filled successfully
+[INFO ] 2025-03-24 15:57:52.837 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-24 15:57:52.837 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generated Username: TestUser2865
+[INFO ] 2025-03-24 15:57:52.837 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generated Password: Test@147
+[INFO ] 2025-03-24 15:57:53.236 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Entered credentials successfully: TestUser2865 / Test@147
+[INFO ] 2025-03-24 15:57:53.603 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Submitting registration form
+[INFO ] 2025-03-24 15:57:53.603 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-24 15:57:53.930 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-24 15:57:53.952 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Welcome TestUser2865
+[INFO ] 2025-03-24 15:57:53.970 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-24 15:57:54.240 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-24 15:57:54.736 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-24 15:57:54.782 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-24 15:57:55.050 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-24 15:57:55.244 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-24 15:57:55.611 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-24 15:57:55.997 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-24 15:57:56.331 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-24 15:57:56.338 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-24 15:57:56.641 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Account opened successfully
+[INFO ] 2025-03-24 15:57:57.159 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver initialized: null
+[INFO ] 2025-03-24 15:57:57.159 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver quit: null
+[INFO ] 2025-03-24 15:57:57.160 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver closed.
+[INFO ] 2025-03-24 15:57:57.175 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-24 15:57:57.856 [TestNG-test-Chrome TestNgRunner Testng-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-24 15:57:57.856 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-24 15:57:58.919 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-24 15:57:59.275 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - User details filled successfully
+[INFO ] 2025-03-24 15:57:59.575 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-24 15:57:59.575 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generated Username: TestUser2304
+[INFO ] 2025-03-24 15:57:59.575 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generated Password: Test@304
+[INFO ] 2025-03-24 15:58:00.154 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Entered credentials successfully: TestUser2304 / Test@304
+[INFO ] 2025-03-24 15:58:00.482 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Submitting registration form
+[INFO ] 2025-03-24 15:58:00.482 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-24 15:58:00.781 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-24 15:58:00.798 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Welcome TestUser2304
+[INFO ] 2025-03-24 15:58:00.812 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-24 15:58:01.082 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-24 15:58:01.619 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-24 15:58:01.692 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-24 15:58:01.947 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-24 15:58:02.116 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-24 15:58:02.517 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-24 15:58:02.849 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-24 15:58:03.175 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-24 15:58:03.180 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-24 15:58:03.477 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Account opened successfully
+[INFO ] 2025-03-24 15:58:03.733 [TestNG-test-Chrome TestNgRunner Testng-1] TransferFundsStepDefinition - Clicking on Transfer Funds
+[INFO ] 2025-03-24 15:58:04.286 [TestNG-test-Chrome TestNgRunner Testng-1] TransferFundsStepDefinition - Enter amount to transfer
+[INFO ] 2025-03-24 15:58:04.596 [TestNG-test-Chrome TestNgRunner Testng-1] TransferFundsStepDefinition - Selecting From and To account
+[INFO ] 2025-03-24 15:58:05.007 [TestNG-test-Chrome TestNgRunner Testng-1] TransferFundsStepDefinition - Clicking on Transfer button
+[INFO ] 2025-03-24 15:58:05.401 [TestNG-test-Chrome TestNgRunner Testng-1] TransferFundsStepDefinition - Verifying Transfer success message
+[INFO ] 2025-03-24 15:58:06.849 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver initialized: null
+[INFO ] 2025-03-24 15:58:06.849 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver quit: null
+[INFO ] 2025-03-24 15:58:06.849 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver closed.
+[INFO ] 2025-03-24 15:58:06.862 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-24 15:58:07.585 [TestNG-test-Chrome TestNgRunner Testng-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-24 15:58:07.585 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-24 15:58:08.600 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-24 15:58:08.933 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - User details filled successfully
+[INFO ] 2025-03-24 15:58:09.235 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-24 15:58:09.235 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generated Username: TestUser8551
+[INFO ] 2025-03-24 15:58:09.235 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Generated Password: Test@28
+[INFO ] 2025-03-24 15:58:09.570 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Entered credentials successfully: TestUser8551 / Test@28
+[INFO ] 2025-03-24 15:58:09.950 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Submitting registration form
+[INFO ] 2025-03-24 15:58:09.950 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-24 15:58:10.268 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-24 15:58:10.288 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Welcome TestUser8551
+[INFO ] 2025-03-24 15:58:10.301 [TestNG-test-Chrome TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-24 15:58:10.592 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-24 15:58:11.135 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-24 15:58:11.179 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-24 15:58:11.549 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-24 15:58:11.760 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-24 15:58:12.171 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-24 15:58:12.491 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-24 15:58:12.805 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-24 15:58:12.808 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-24 15:58:13.107 [TestNG-test-Chrome TestNgRunner Testng-1] AccountStepDefinition - Account opened successfully
+[INFO ] 2025-03-24 15:58:13.371 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanStepDefinition - Clicking on Request Loan
+[INFO ] 2025-03-24 15:58:13.578 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Clicked on Request Loan
+[INFO ] 2025-03-24 15:58:13.864 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanStepDefinition - Entering loan amount
+[INFO ] 2025-03-24 15:58:13.905 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Entered loan amount : 10000
+[INFO ] 2025-03-24 15:58:14.183 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanStepDefinition - Entering down payment amount
+[INFO ] 2025-03-24 15:58:14.219 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Entered down payment amount : 1000
+[INFO ] 2025-03-24 15:58:14.527 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanStepDefinition - Selecting From Account
+[INFO ] 2025-03-24 15:58:14.565 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Clicked on the first option: 48975
+[INFO ] 2025-03-24 15:58:14.844 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanStepDefinition - Submitting loan request
+[INFO ] 2025-03-24 15:58:14.891 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Clicked on Apply Now button
+[INFO ] 2025-03-24 15:58:15.205 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Loan Status: Denied
+[INFO ] 2025-03-24 15:58:15.215 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Loan Denied
+[INFO ] 2025-03-24 15:58:15.224 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanStepDefinition - Loan request denied
+[INFO ] 2025-03-24 15:58:15.246 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Loan Message: Loan Request Processed
+[INFO ] 2025-03-24 15:58:15.268 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Loan Provider:
+[INFO ] 2025-03-24 15:58:15.279 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Wealth Securities Dynamic Loans (WSDL)
+[INFO ] 2025-03-24 15:58:15.291 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Date:
+[INFO ] 2025-03-24 15:58:15.302 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - 03-24-2025
+[INFO ] 2025-03-24 15:58:15.313 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Status:
+[INFO ] 2025-03-24 15:58:15.323 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Denied
+[INFO ] 2025-03-24 15:58:15.334 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Loan Status: Denied
+[INFO ] 2025-03-24 15:58:15.340 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - Loan Denied
+[INFO ] 2025-03-24 15:58:15.360 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - 
+[INFO ] 2025-03-24 15:58:15.365 [TestNG-test-Chrome TestNgRunner Testng-1] RequestLoanPage - 
+[INFO ] 2025-03-24 15:58:15.793 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver initialized: null
+[INFO ] 2025-03-24 15:58:15.794 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver quit: null
+[INFO ] 2025-03-24 15:58:15.794 [TestNG-test-Chrome TestNgRunner Testng-1] WebDriverFactory - WebDriver closed.
+[INFO ] 2025-03-24 15:58:15.965 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-24 15:58:16.787 [TestNG-test-Firefox TestNgRunner Testng-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-24 15:58:16.787 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-24 15:58:17.934 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-24 15:58:18.338 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - User details filled successfully
+[INFO ] 2025-03-24 15:58:18.617 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-24 15:58:18.617 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generated Username: TestUser5190
+[INFO ] 2025-03-24 15:58:18.617 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generated Password: Test@59
+[INFO ] 2025-03-24 15:58:18.991 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Entered credentials successfully: TestUser5190 / Test@59
+[INFO ] 2025-03-24 15:58:19.338 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Submitting registration form
+[INFO ] 2025-03-24 15:58:19.338 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-24 15:58:19.630 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-24 15:58:19.649 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Welcome TestUser5190
+[INFO ] 2025-03-24 15:58:19.662 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-24 15:58:19.956 [TestNG-test-Firefox TestNgRunner Testng-1] Loggerload - Login App URL
+[INFO ] 2025-03-24 15:58:19.956 [TestNG-test-Firefox TestNgRunner Testng-1] Loggerload - Element found and now performing Click
+[INFO ] 2025-03-24 15:58:20.211 [TestNG-test-Firefox TestNgRunner Testng-1] LoginStepDefinition - I am in Login Page
+[INFO ] 2025-03-24 15:58:20.681 [TestNG-test-Firefox TestNgRunner Testng-1] LoginStepDefinition - Entering credentials: TestUser5190 / Test@59
+[INFO ] 2025-03-24 15:58:20.777 [TestNG-test-Firefox TestNgRunner Testng-1] LoginStepDefinition - Entered credentials successfully.
+[INFO ] 2025-03-24 15:58:21.096 [TestNG-test-Firefox TestNgRunner Testng-1] LoginStepDefinition - click login
+[INFO ] 2025-03-24 15:58:21.100 [TestNG-test-Firefox TestNgRunner Testng-1] LoginStepDefinition - Check if already logged in, if not, then login
+[INFO ] 2025-03-24 15:58:21.126 [TestNG-test-Firefox TestNgRunner Testng-1] Loggerload - Element found and now performing Click
+[INFO ] 2025-03-24 15:58:21.574 [TestNG-test-Firefox TestNgRunner Testng-1] LoginStepDefinition - Successfully logged in and navigated to Accounts Overview.
+[INFO ] 2025-03-24 15:58:21.927 [TestNG-test-Firefox TestNgRunner Testng-1] LoginStepDefinition - logged in to Para Bank
+[INFO ] 2025-03-24 15:58:22.227 [TestNG-test-Firefox TestNgRunner Testng-1] LoginStepDefinition - Successful login
+[INFO ] 2025-03-24 15:58:22.672 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver initialized: null
+[INFO ] 2025-03-24 15:58:22.672 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver quit: null
+[INFO ] 2025-03-24 15:58:22.673 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver closed.
+[INFO ] 2025-03-24 15:58:22.681 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-24 15:58:23.365 [TestNG-test-Firefox TestNgRunner Testng-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-24 15:58:23.365 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-24 15:58:24.393 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-24 15:58:24.756 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - User details filled successfully
+[INFO ] 2025-03-24 15:58:25.046 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-24 15:58:25.046 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generated Username: TestUser7896
+[INFO ] 2025-03-24 15:58:25.046 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generated Password: Test@9
+[INFO ] 2025-03-24 15:58:25.435 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Entered credentials successfully: TestUser7896 / Test@9
+[INFO ] 2025-03-24 15:58:25.947 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Submitting registration form
+[INFO ] 2025-03-24 15:58:25.947 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-24 15:58:26.251 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-24 15:58:26.270 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Welcome TestUser7896
+[INFO ] 2025-03-24 15:58:26.282 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-24 15:58:26.544 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-24 15:58:27.047 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-24 15:58:27.089 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-24 15:58:27.344 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-24 15:58:27.519 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-24 15:58:27.957 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-24 15:58:28.352 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-24 15:58:28.689 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-24 15:58:28.692 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-24 15:58:29.009 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Account opened successfully
+[INFO ] 2025-03-24 15:58:29.560 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver initialized: null
+[INFO ] 2025-03-24 15:58:29.561 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver quit: null
+[INFO ] 2025-03-24 15:58:29.561 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver closed.
+[INFO ] 2025-03-24 15:58:29.579 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-24 15:58:30.302 [TestNG-test-Firefox TestNgRunner Testng-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-24 15:58:30.303 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-24 15:58:31.427 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-24 15:58:31.813 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - User details filled successfully
+[INFO ] 2025-03-24 15:58:32.101 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-24 15:58:32.101 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generated Username: TestUser1701
+[INFO ] 2025-03-24 15:58:32.101 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generated Password: Test@884
+[INFO ] 2025-03-24 15:58:32.520 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Entered credentials successfully: TestUser1701 / Test@884
+[INFO ] 2025-03-24 15:58:32.893 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Submitting registration form
+[INFO ] 2025-03-24 15:58:32.894 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-24 15:58:33.211 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-24 15:58:33.234 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Welcome TestUser1701
+[INFO ] 2025-03-24 15:58:33.253 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-24 15:58:33.568 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-24 15:58:34.220 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-24 15:58:34.262 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-24 15:58:34.537 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-24 15:58:34.710 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-24 15:58:35.094 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-24 15:58:35.438 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-24 15:58:35.786 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-24 15:58:35.790 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-24 15:58:36.091 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Account opened successfully
+[INFO ] 2025-03-24 15:58:36.440 [TestNG-test-Firefox TestNgRunner Testng-1] TransferFundsStepDefinition - Clicking on Transfer Funds
+[INFO ] 2025-03-24 15:58:36.941 [TestNG-test-Firefox TestNgRunner Testng-1] TransferFundsStepDefinition - Enter amount to transfer
+[INFO ] 2025-03-24 15:58:37.289 [TestNG-test-Firefox TestNgRunner Testng-1] TransferFundsStepDefinition - Selecting From and To account
+[INFO ] 2025-03-24 15:58:37.723 [TestNG-test-Firefox TestNgRunner Testng-1] TransferFundsStepDefinition - Clicking on Transfer button
+[INFO ] 2025-03-24 15:58:38.084 [TestNG-test-Firefox TestNgRunner Testng-1] TransferFundsStepDefinition - Verifying Transfer success message
+[INFO ] 2025-03-24 15:58:39.637 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver initialized: null
+[INFO ] 2025-03-24 15:58:39.637 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver quit: null
+[INFO ] 2025-03-24 15:58:39.637 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver closed.
+[INFO ] 2025-03-24 15:58:39.646 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - Initializing WebDriver for browser: chrome
+[INFO ] 2025-03-24 15:58:40.382 [TestNG-test-Firefox TestNgRunner Testng-1] Loggerload - Register_App_URL
+[INFO ] 2025-03-24 15:58:40.384 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Opening ParaBank registration page: https://parabank.parasoft.com/parabank/register.htm
+[INFO ] 2025-03-24 15:58:41.600 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Filling user details on registration form
+[INFO ] 2025-03-24 15:58:42.045 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - User details filled successfully
+[INFO ] 2025-03-24 15:58:42.354 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generating random credentials for registration
+[INFO ] 2025-03-24 15:58:42.354 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generated Username: TestUser8518
+[INFO ] 2025-03-24 15:58:42.354 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Generated Password: Test@366
+[INFO ] 2025-03-24 15:58:42.779 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Entered credentials successfully: TestUser8518 / Test@366
+[INFO ] 2025-03-24 15:58:43.528 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Submitting registration form
+[INFO ] 2025-03-24 15:58:43.528 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration form submitted successfully.
+[INFO ] 2025-03-24 15:58:43.826 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Actual page title after registration: ParaBank | Customer Created
+[INFO ] 2025-03-24 15:58:43.844 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Welcome TestUser8518
+[INFO ] 2025-03-24 15:58:43.858 [TestNG-test-Firefox TestNgRunner Testng-1] RegisterStepDefinition - Registration success message: Your account was created successfully. You are now logged in.
+[INFO ] 2025-03-24 15:58:44.120 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Clicking on: Open New Account
+[INFO ] 2025-03-24 15:58:44.703 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Navigated to account creation page
+[INFO ] 2025-03-24 15:58:44.829 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Got all details of the account
+[INFO ] 2025-03-24 15:58:45.104 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Opening a new bank account
+[INFO ] 2025-03-24 15:58:45.485 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - clicked open new account
+[INFO ] 2025-03-24 15:58:45.899 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Selected account type: Savings
+[INFO ] 2025-03-24 15:58:46.261 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Input deposit amount: 1000
+[INFO ] 2025-03-24 15:58:46.602 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Opened new account form
+[INFO ] 2025-03-24 15:58:46.607 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Account created successfully
+[INFO ] 2025-03-24 15:58:46.908 [TestNG-test-Firefox TestNgRunner Testng-1] AccountStepDefinition - Account opened successfully
+[INFO ] 2025-03-24 15:58:47.236 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanStepDefinition - Clicking on Request Loan
+[INFO ] 2025-03-24 15:58:47.407 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Clicked on Request Loan
+[INFO ] 2025-03-24 15:58:47.727 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanStepDefinition - Entering loan amount
+[INFO ] 2025-03-24 15:58:47.766 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Entered loan amount : 10000
+[INFO ] 2025-03-24 15:58:48.050 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanStepDefinition - Entering down payment amount
+[INFO ] 2025-03-24 15:58:48.103 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Entered down payment amount : 1000
+[INFO ] 2025-03-24 15:58:48.412 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanStepDefinition - Selecting From Account
+[INFO ] 2025-03-24 15:58:48.463 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Clicked on the first option: 49863
+[INFO ] 2025-03-24 15:58:48.798 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanStepDefinition - Submitting loan request
+[INFO ] 2025-03-24 15:58:48.852 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Clicked on Apply Now button
+[INFO ] 2025-03-24 15:58:49.167 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Loan Status: Denied
+[INFO ] 2025-03-24 15:58:49.172 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Loan Denied
+[INFO ] 2025-03-24 15:58:49.178 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanStepDefinition - Loan request denied
+[INFO ] 2025-03-24 15:58:49.196 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Loan Message: Loan Request Processed
+[INFO ] 2025-03-24 15:58:49.215 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Loan Provider:
+[INFO ] 2025-03-24 15:58:49.225 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Wealth Securities Dynamic Loans (WSDL)
+[INFO ] 2025-03-24 15:58:49.236 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Date:
+[INFO ] 2025-03-24 15:58:49.247 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - 03-24-2025
+[INFO ] 2025-03-24 15:58:49.257 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Status:
+[INFO ] 2025-03-24 15:58:49.267 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Denied
+[INFO ] 2025-03-24 15:58:49.276 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Loan Status: Denied
+[INFO ] 2025-03-24 15:58:49.281 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - Loan Denied
+[INFO ] 2025-03-24 15:58:49.299 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - 
+[INFO ] 2025-03-24 15:58:49.305 [TestNG-test-Firefox TestNgRunner Testng-1] RequestLoanPage - 
+[INFO ] 2025-03-24 15:58:49.670 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver initialized: null
+[INFO ] 2025-03-24 15:58:49.671 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver quit: null
+[INFO ] 2025-03-24 15:58:49.671 [TestNG-test-Firefox TestNgRunner Testng-1] WebDriverFactory - WebDriver closed.

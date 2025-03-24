@@ -23,7 +23,6 @@ public class WebDriverFactory {
     // Use ThreadLocal to ensure that each thread gets its own WebDriver instance
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     private static final Logger logger = LogManager.getLogger(WebDriverFactory.class);
-    //private static ConfigReader readConfig = new ConfigReader();
 
     //public static WebDriver getDriver(String browser) {
         public static WebDriver getDriver() {
@@ -72,79 +71,60 @@ public class WebDriverFactory {
 
     private static void initializeDriver(String browser) {
         logger.info("Initializing WebDriver for browser: " + browser);
-        WebDriver localDriver = null;
         switch (browser.toLowerCase()) {
             case "chrome":
-            if (System.getProperty("os.name").toLowerCase().contains("linux")) {
-                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-                //System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe");
-            } else {
-                System.setProperty("webdriver.chrome.driver", "./src/test/resources/ChromeDriver/chromedriver.exe");
-            } 
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36");
-            options.addArguments("--disable-logging");
-            //chromeOptions.addArguments("--remote-debugging-port=9223"); // Use a custom port
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--no-sandbox");
-            //chromeOptions.addArguments("--log-level=3");
-            options.addArguments("--remote-allow-origins=*"); 
-            options.addArguments("--disable-extensions"); 
-            options.addArguments("--disable-gpu");
-            options.addArguments("--headless"); 
-            driver.set(new ChromeDriver(options));
-            //localDriver = new ChromeDriver(options);
-            break;
-
+                initializeChromeDriver();
+                break;
             case "firefox":
-                WebDriverManager.firefoxdriver().setup();
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36");
-                firefoxOptions.addArguments("--disable-logging");
-                //firefoxOptions.addArguments("--remote-debugging-port=9223"); // Use a custom port
-                firefoxOptions.addArguments("--disable-dev-shm-usage");
-                firefoxOptions.addArguments("--no-sandbox");
-                //firefoxOptions.addArguments("--log-level=3");
-                firefoxOptions.addArguments("--remote-allow-origins=*"); 
-                firefoxOptions.addArguments("--disable-extensions"); 
-                firefoxOptions.addArguments("--disable-gpu");
-                firefoxOptions.addArguments("--headless");
-                //System.setProperty("webdriver.gecko.driver", "./src/test/resources/FirefoxDriver/geckodriver.exe");
-                driver.set(new FirefoxDriver(firefoxOptions));
-                //localDriver = new FirefoxDriver(firefoxOptions);
+                initializeFirefoxDriver();
                 break;
-
             case "edge":
-                WebDriverManager.edgedriver().setup(); //  Automatically downloads the correct version
-                EdgeOptions edgeOptions = new EdgeOptions();
-                //edgeOptions.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36");
-                edgeOptions.addArguments("--disable-logging");
-                //edgeOptions.addArguments("--remote-debugging-port=9223"); // Use a custom port
-                //edgeOptions.addArguments("--disable-dev-shm-usage");
-                edgeOptions.addArguments("--no-sandbox");
-                //edgeOptions.addArguments("--log-level=3");
-                //edgeOptions.addArguments("--remote-allow-origins=*"); 
-                edgeOptions.addArguments("--disable-extensions"); 
-                //edgeOptions.addArguments("--disable-gpu");
-                edgeOptions.addArguments("--headless");
-                //System.setProperty("webdriver.edge.driver", "./src/test/resources/EdgeDriver/msedgedriver.exe");              
-                //driver.quitDriver();
-                //driver.set(new EdgeDriver());
-                driver.set(new EdgeDriver(edgeOptions));
-                //localDriver = new EdgeDriver(edgeOptions);
+                initializeEdgeDriver();
                 break;
-
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
-
-        // Set the WebDriver instance for the current thread
-        //driver.set(localDriver);
         driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-        driver.get().manage().window().maximize();  
+        driver.get().manage().window().maximize();
         deleteAllCookies();
     }
+    
+    private static void initializeChromeDriver() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36");
+        options.addArguments("--disable-logging");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--headless");
+        
+        WebDriverManager.chromedriver().setup();
+        driver.set(new ChromeDriver(options));
+    }
+    
+    private static void initializeFirefoxDriver() {
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--disable-logging");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--headless");
+        WebDriverManager.firefoxdriver().setup();
+        driver.set(new FirefoxDriver(options));
+    }
+    
+    private static void initializeEdgeDriver() {
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--disable-logging");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--headless");
+        WebDriverManager.edgedriver().setup();
+        driver.set(new EdgeDriver(options));
+    }
+    
 
     private static void deleteAllCookies() {
         driver.get().manage().deleteAllCookies();
