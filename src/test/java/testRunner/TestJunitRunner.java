@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 				"json:target/cucumber-reports.json",
 				"junit:target/cucumber-reports.xml",
 				//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",	
-				"com.aventstack.chaintest.plugins.ChainTestCucumberListener:",
+				//"com.aventstack.chaintest.plugins.ChainTestCucumberListener:",
 				"timeline:test-output-thread/"
            }
 		)
@@ -25,11 +25,15 @@ import io.cucumber.junit.CucumberOptions;
 public class TestJunitRunner {
 
 }
-
+//mvn -Dtest="testRunner.TestJunitRunner" test
 /*
   <!-- Run test through testRunner folder having testrunner files
 				for parallel execution -->
-				
+To run junit runner file 
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M5</version>        
 				<configuration> 
 					<parallel>methods</parallel>  <!-- or classes / both -->
 					<threadCount>4</threadCount>  <!-- Number of threads to use -->
@@ -40,5 +44,34 @@ public class TestJunitRunner {
 			            <!-- <cucumber.filter.tags>@SmokeTest</cucumber.filter.tags> -->
 					</systemPropertyVariables>
 					<argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
-				</configuration>    	
+				</configuration>  
+		</plugin>  	
  */ 
+/*
+ **************   To run junit runner,  remove testng configuration ***********************
+ <properties>
+    <suiteXmlFile>./src/test/resources/testng/testng.xml,./src/test/resources/testng/paralleltestng.xml</suiteXmlFile> 
+</properties>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M5</version>
+            <configuration>
+                <suiteXmlFiles>${suiteXmlFile}</suiteXmlFiles> 
+                <parallel>classes</parallel>
+                <threadCount>4</threadCount>
+                <includes>
+                    <include>testRunner/Test*.java</include>
+                </includes>
+                <systemPropertyVariables>					
+                    <!-- <cucumber.filter.tags>@SmokeTest</cucumber.filter.tags> -->
+                </systemPropertyVariables>
+                <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+*/

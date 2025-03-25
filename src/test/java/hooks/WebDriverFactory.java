@@ -37,6 +37,8 @@ public class WebDriverFactory {
             } 
             try { 
                 // Attempt to initialize the WebDriver based on the browser passed from TestNgRunner
+               // Log the browser being used for better debugging
+               logger.info("Initializing WebDriver for browser: " + TestNgRunner.browser);
                 initializeDriver(TestNgRunner.browser);  
             } catch (Exception e) {
                 // Log the error with a message containing the exception details
@@ -112,9 +114,10 @@ public class WebDriverFactory {
         options.addArguments("--disable-extensions");
         options.addArguments("--headless");
         WebDriverManager.firefoxdriver().setup();
+        //System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\FireFoxDriver\\geckodriver.exe");
         driver.set(new FirefoxDriver(options));
     }
-    
+ 
     private static void initializeEdgeDriver() {
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--disable-logging");
@@ -122,6 +125,7 @@ public class WebDriverFactory {
         options.addArguments("--disable-extensions");
         options.addArguments("--headless");
         WebDriverManager.edgedriver().setup();
+        //System.setProperty("webdriver.edge.driver", "src\\test\\resources\\EdgeDriver\\msedgedriver.exe");
         driver.set(new EdgeDriver(options));
     }
     

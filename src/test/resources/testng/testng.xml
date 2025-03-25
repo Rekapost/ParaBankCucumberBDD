@@ -6,7 +6,7 @@
     <listener class-name="utilities.chainTestListener"></listener>
 </listeners>
 
-  <test name="Test">
+  <test name="Chrome Junit Test">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="testRunner.TestJunitRunner"/>

@@ -27,6 +27,7 @@ public class hook {
         //String browser = System.getProperty("browser");  // Get browser parameter
         //driver = WebDriverFactory.getDriver(browser); // Get the WebDriver instance based on browser
         driver = WebDriverFactory.getDriver();
+        // System.out.println("Before Hook - Container State: " + picoContainer.getState());
     }
    @After
     public  void tearDown() {

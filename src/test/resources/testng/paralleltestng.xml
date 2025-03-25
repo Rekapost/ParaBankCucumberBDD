@@ -6,7 +6,7 @@
     <listener class-name="utilities.chainTestListener"></listener>
 </listeners>
 
-  <test name="Chrome TestNgRunner Testng">
+  <test name="Edge TestNgRunner Testng">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="testRunner.TestNgRunner"/>
