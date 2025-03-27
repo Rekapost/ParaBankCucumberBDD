@@ -33,6 +33,11 @@ public class hook {
         // Close the driver using WebDriverFactory to handle thread-local driver
         if (driver != null) {
             //driver.quit();  // Close the browser
+            // Clean up test output files here
+            File reportFile = new File("test-output-thread/vis-timeline-graph2d.min.js");
+            if (reportFile.exists()) {
+                reportFile.delete();
+            }
             WebDriverFactory.quitDriver(); // Ensure cleanup in WebDriverFactory
             System.out.println("Teardown: Browser closed.");
         }

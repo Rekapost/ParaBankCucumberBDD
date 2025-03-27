@@ -1,4 +1,3 @@
-mvn clean test
 mvn clean test "-Dsurefire.suiteXmlFiles=testng.xml"
 docker-compose -f docker-compose-h2.yml up
 Chaintest report available at: [http://localhost:8081/]

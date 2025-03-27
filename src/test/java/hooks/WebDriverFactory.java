@@ -1,6 +1,9 @@
 package hooks;
 
+import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 
 import org.apache.log4j.PropertyConfigurator;
@@ -15,6 +18,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import testRunner.TestNgRunner;
@@ -23,7 +28,11 @@ public class WebDriverFactory {
     // Use ThreadLocal to ensure that each thread gets its own WebDriver instance
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     private static final Logger logger = LogManager.getLogger(WebDriverFactory.class);
-    //private static ConfigReader readConfig = new ConfigReader();
+   
+    // Static block for logger initialization
+    static {
+        PropertyConfigurator.configure("src/test/resources/log4j2.properties");
+    }
 
     //public static WebDriver getDriver(String browser) {
         public static WebDriver getDriver() {
@@ -66,85 +75,149 @@ public class WebDriverFactory {
                 logger.info(logEntry.getMessage());
             });
             // Log initialization details
+            logger.info("WebDriver initialized: " + driver.get().getClass().getSimpleName());
             //logger.info("Using WebDriver: " + browser);
             return driver.get();
     }
 
     private static void initializeDriver(String browser) {
         logger.info("Initializing WebDriver for browser: " + browser);
-        WebDriver localDriver = null;
+        //WebDriver localDriver = null;
+        boolean isHeadless = Boolean.parseBoolean(System.getProperty("headless", "true")); // Default to true if not set
+        
         switch (browser.toLowerCase()) {
             case "chrome":
-            if (System.getProperty("os.name").toLowerCase().contains("linux")) {
-                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-                //System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe");
-            } else {
-                System.setProperty("webdriver.chrome.driver", "./src/test/resources/ChromeDriver/chromedriver.exe");
-            } 
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36");
-            options.addArguments("--disable-logging");
-            //chromeOptions.addArguments("--remote-debugging-port=9223"); // Use a custom port
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--no-sandbox");
-            //chromeOptions.addArguments("--log-level=3");
-            options.addArguments("--remote-allow-origins=*"); 
-            options.addArguments("--disable-extensions"); 
-            options.addArguments("--disable-gpu");
-            options.addArguments("--headless"); 
-            driver.set(new ChromeDriver(options));
-            //localDriver = new ChromeDriver(options);
-            break;
-
+                initializeChromeDriver(isHeadless);
+                break;
+    
             case "firefox":
-                WebDriverManager.firefoxdriver().setup();
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36");
-                firefoxOptions.addArguments("--disable-logging");
-                //firefoxOptions.addArguments("--remote-debugging-port=9223"); // Use a custom port
-                firefoxOptions.addArguments("--disable-dev-shm-usage");
-                firefoxOptions.addArguments("--no-sandbox");
-                //firefoxOptions.addArguments("--log-level=3");
-                firefoxOptions.addArguments("--remote-allow-origins=*"); 
-                firefoxOptions.addArguments("--disable-extensions"); 
-                firefoxOptions.addArguments("--disable-gpu");
-                firefoxOptions.addArguments("--headless");
-                //System.setProperty("webdriver.gecko.driver", "./src/test/resources/FirefoxDriver/geckodriver.exe");
-                driver.set(new FirefoxDriver(firefoxOptions));
-                //localDriver = new FirefoxDriver(firefoxOptions);
+                initializeFirefoxDriver(isHeadless);
                 break;
-
+    
             case "edge":
-                WebDriverManager.edgedriver().setup(); //  Automatically downloads the correct version
-                EdgeOptions edgeOptions = new EdgeOptions();
-                //edgeOptions.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36");
-                edgeOptions.addArguments("--disable-logging");
-                //edgeOptions.addArguments("--remote-debugging-port=9223"); // Use a custom port
-                //edgeOptions.addArguments("--disable-dev-shm-usage");
-                edgeOptions.addArguments("--no-sandbox");
-                //edgeOptions.addArguments("--log-level=3");
-                //edgeOptions.addArguments("--remote-allow-origins=*"); 
-                edgeOptions.addArguments("--disable-extensions"); 
-                //edgeOptions.addArguments("--disable-gpu");
-                edgeOptions.addArguments("--headless");
-                //System.setProperty("webdriver.edge.driver", "./src/test/resources/EdgeDriver/msedgedriver.exe");              
-                //driver.quitDriver();
-                //driver.set(new EdgeDriver());
-                driver.set(new EdgeDriver(edgeOptions));
-                //localDriver = new EdgeDriver(edgeOptions);
+                initializeEdgeDriver(isHeadless);
                 break;
-
+    
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
-
-        // Set the WebDriver instance for the current thread
         //driver.set(localDriver);
         driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         driver.get().manage().window().maximize();  
         deleteAllCookies();
     }
+    
+    private static void initializeChromeDriver(boolean isHeadless) {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36");
+        options.addArguments("--disable-logging");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--headless");
+        
+        // Enable headless mode if flag is set
+        if (isHeadless) {
+            options.addArguments("--headless");
+        }
+    
+        // Selenium Grid Configuration
+        if (isGridExecution()) {
+            try {
+                String gridUrl = System.getProperty("selenium.grid.url", "http://localhost:5555/wd/hub");
+                DesiredCapabilities capabilities = new DesiredCapabilities();
+                capabilities.setBrowserName("chrome");
+                capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+                capabilities.setCapability("platformName", "LINUX");
+    
+                // Initialize RemoteWebDriver for Grid execution
+                driver.set(new RemoteWebDriver(new URL(gridUrl), capabilities));
+            } catch (Exception e) {
+                logger.error("Error initializing RemoteWebDriver for Selenium Grid", e);
+                throw new RuntimeException("Selenium Grid setup failed", e);
+            }
+        } 
+        // LambdaTest Configuration
+            else if (isLambdaExecution()) {
+                //String ltUsername = System.getenv("LT_USERNAME");
+                //String ltAccessKey = System.getenv("LT_ACCESS_KEY");           
+                // Step 1: LambdaTest Capabilities
+                Map<String, Object> ltOptions = new HashMap<>();
+                ltOptions.put("username", "rekaharisri");
+                ltOptions.put("accessKey", "0UV2Eyfkmupm6epnxh6RK6UDtMOebAibFwtZO1WxuPqeySA0zW");
+                //ltOptions.put("user", ltUsername); // Fetch from environment
+                //ltOptions.put("accessKey", ltAccessKey);
+                //ltOptions.put("username", System.getenv("LT_USERNAME"));
+                //ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));       
+                ltOptions.put("build", "Parabank-BDD-Cucumber-Framework");
+                ltOptions.put("name", "Parabank Functions");
+                ltOptions.put("platformName", "Windows 10");
+                ltOptions.put("seCdp", true);
+                ltOptions.put("selenium_version", "4.23.0");
+                ltOptions.put("geoLocation", "US");
+
+            // Step 2: Add LambdaTest capabilities inside ChromeOptions
+            options.setCapability("LT:Options", ltOptions);
+            options.setCapability("browserVersion", "latest");
+            options.setCapability("platformName", "Windows 10");
+            options.setCapability("acceptInsecureCerts", true);
+       
+            // Initialize RemoteWebDriver with authentication in URL
+            //String lambdaUrl = "https://" + ltUsername + ":" + ltAccessKey + "@hub.lambdatest.com/wd/hub";
+            //driver = new RemoteWebDriver(new URL(lambdaUrl), options);
+            // Initialize RemoteWebDriver with LambdaTest options
+                try {
+                    driver.set(new RemoteWebDriver(new URL("https://hub.lambdatest.com/wd/hub"), options));
+                } catch (Exception e) {
+                    logger.error("Error initializing RemoteWebDriver for LambdaTest", e);
+                    throw new RuntimeException("LambdaTest setup failed", e);
+                }           
+            }
+        // Local WebDriver Configuration
+        else {
+            WebDriverManager.chromedriver().setup();
+            driver.set(new ChromeDriver(options));
+        }
+    }
+    
+    private static boolean isGridExecution() {
+        // Checks if the execution is on a Selenium Grid
+        return Boolean.parseBoolean(System.getProperty("selenium.grid.enabled", "false"));
+    }
+
+    
+    private static boolean isLambdaExecution() {
+        // Checks if the execution is on LambdaTest
+        return Boolean.parseBoolean(System.getProperty("selenium.lambdatest.enabled", "false"));
+        //return true; // Always return true to enforce LambdaTest execution
+    }
+    
+
+    private static void initializeFirefoxDriver(boolean isHeadless) {
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--disable-logging");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--headless");
+        WebDriverManager.firefoxdriver().setup();
+        //System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\FireFoxDriver\\geckodriver.exe");
+        driver.set(new FirefoxDriver(options));
+    }
+ 
+    private static void initializeEdgeDriver(boolean isHeadless) {
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--disable-logging");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--headless");
+        WebDriverManager.edgedriver().setup();
+        //System.setProperty("webdriver.edge.driver", "src\\test\\resources\\EdgeDriver\\msedgedriver.exe");
+        driver.set(new EdgeDriver(options));
+    }
+    
 
     private static void deleteAllCookies() {
         driver.get().manage().deleteAllCookies();

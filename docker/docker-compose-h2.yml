@@ -1,7 +1,6 @@
-version: '3'
 services:
   chaintest:
-    image: anshooarora/chaintest:latest
+    image: reka/chaintest:latest
     container_name: chaintest
     environment:
       - "SPRING_PROFILES_ACTIVE=h2"

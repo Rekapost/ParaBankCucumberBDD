@@ -83,10 +83,12 @@ public class AccountOpenPage {
             PageFactory.initElements(driver, this);
         }
 
-        public void accountOverview(){
-             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-             wait.until(ExpectedConditions.visibilityOf(accountOverview));         
+        public void accountOverview() {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='leftPanel']/ul/li[2]/a")));  // Wait until element is present in the DOM
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftPanel']/ul/li[2]/a")));  // Wait until element is visible
         }
+        
 
         public void clickAccountOverview(){
             accountOverview.click();   
