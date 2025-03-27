@@ -1,6 +1,7 @@
 package pageObjects;
 import java.time.Duration;
-import utilities.BrowserUtility;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -9,6 +10,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.BrowserUtility;
 
 public class LoginPage {
 	
@@ -48,7 +51,12 @@ public class LoginPage {
 
 	public void logout(){
 		//logoutButton.click();
-		browserUtility.clickOn(logoutButton);
+		//browserUtility.clickOn(logoutButton);
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftPanel']/ul/li[8]/a")));
+		element.click();
+
 	}
 	public void username(String uname)
 	{
