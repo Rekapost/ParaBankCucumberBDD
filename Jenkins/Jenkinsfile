@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Running Maven tests'
                 // Run your Maven tests using the testng.xml configuration file
-                sh 'mvn clean test'  // Adjust if you have a specific testng.xml or configuration
+                bat 'mvn clean test'  // Adjust if you have a specific testng.xml or configuration
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'SONAR_CLOUD_TOKEN', variable: 'SONAR_AUTH_TOKEN')]) {
                     echo "Running SonarCloud Analysis for project: ${SONAR_PROJECT_KEY}"
-                    sh "mvn clean verify sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.organization=${SONAR_ORG} -Dsonar.host.url=${SONAR_URL} -Dsonar.login=$SONAR_AUTH_TOKEN"
+                    bat "mvn clean verify sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.organization=${SONAR_ORG} -Dsonar.host.url=${SONAR_URL} -Dsonar.login=$SONAR_AUTH_TOKEN"
                 }
             }
         }
@@ -40,7 +40,7 @@ pipeline {
                 stage('Check Docker Version') {
                     steps {
                         script {
-                            sh 'docker --version'
+                            bat 'docker --version'
                         }
                     }
                 }
@@ -77,7 +77,7 @@ pipeline {
             steps {
                 echo 'Cleaning up after tests'
                 // Optional: Run cleanup tasks
-                sh 'docker container prune -f'  // Example cleanup command
+                bat 'docker container prune -f'  // Example cleanup command
             }
         }
 
