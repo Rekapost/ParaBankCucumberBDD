@@ -17,6 +17,10 @@ To run the tests on Selenium Grid:
 mvn clean test -Dselenium.grid.url=http://localhost:5555/wd/hub
 ![alt text](image-7.png)
 
+Docker-Selenium Grid:
+docker-compose up -d --scale chrome=3 --scale firefox=3 && mvn clean test
+![alt text](image-20.png)
+
 C:\Users\nreka\vscodedevops\parabank>docker run -d -p 5555:4444 --name selenium-hub selenium/standalone-chrome
 7e12b8f9e7d4d46866c3e12bb8aa3499ab083e302fbae5786f294ef281b1b22d
 ![alt text](image-6.png)
@@ -36,10 +40,20 @@ https://automation.lambdatest.com/
 Github Actions:
 ![alt text](image-10.png)
 
+Performance Testing:
+Stress Testing:
+![alt text](image-17.png)
+![alt text](image-18.png)
+
+Load Test:
+![alt text](image-19.png)
+
 Static Code Analysis:
 mvn clean verify sonar:sonar -Dsonar.projectKey=Rekapost_ParaBankCucumberBDD -Dsonar.organization=rekasonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_AUTH_TOKEN}
 C:\Users\nreka\vscodedevops\parabank>mvn clean verify sonar:sonar -Dsonar.projectKey=ParaBankCucumberBDD -Dsonar.organization=rekasonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=45775a0f12b8469d4619ddc4d24d7e5faf3aa4e0
   ![alt text](image-11.png)
+  ![alt text](image-15.png)
+  ![alt text](image-16.png)
 
 Jenkins File CI-CD:
 ![alt text](image-12.png)  

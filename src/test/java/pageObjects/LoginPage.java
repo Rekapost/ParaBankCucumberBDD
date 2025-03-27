@@ -24,7 +24,7 @@ public class LoginPage {
 			this.driver = driver;
 			browserUtility = new BrowserUtility(driver);
 			PageFactory.initElements(driver, this);
-			this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		}
 	
 //  What is CacheLookup in Selenium?
@@ -53,7 +53,6 @@ public class LoginPage {
 		//logoutButton.click();
 		//browserUtility.clickOn(logoutButton);
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftPanel']/ul/li[8]/a")));
 		element.click();
 

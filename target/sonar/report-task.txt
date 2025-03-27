@@ -1,7 +1,0 @@
-organization=rekasonar
-projectKey=ParaBankCucumberBDD
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.61173
-dashboardUrl=https://sonarcloud.io/dashboard?id=ParaBankCucumberBDD
-ceTaskId=AZXZZnq6iTDYl17Gf0Ri
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZXZZnq6iTDYl17Gf0Ri
