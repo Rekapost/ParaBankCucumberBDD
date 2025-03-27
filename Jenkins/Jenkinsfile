@@ -1,6 +1,11 @@
 pipeline {
-    agent any 
+    //agent any 
+    triggers {
+         githubPush()  # Comment or remove this line
+    }
 
+ agent any 
+ 
     stages {
         stage('Checkout') {
             steps {
@@ -14,11 +19,11 @@ pipeline {
             steps {
                 echo 'Running Maven tests'
                 // Run your Maven tests using the testng.xml configuration file
-                bat 'mvn clean test'  // Adjust if you have a specific testng.xml or configuration
+                sh 'mvn clean test'  // Adjust if you have a specific testng.xml or configuration
             }
         }
 
-                    stage('Static Code Analysis') {
+        stage('Static Code Analysis') {
             environment {
                 SONAR_URL = "https://sonarcloud.io"
                 SONAR_PROJECT_KEY = "ParaBankCucumberBDD"  // Replace with your actual SonarCloud project key
@@ -27,7 +32,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'SONAR_CLOUD_TOKEN', variable: 'SONAR_AUTH_TOKEN')]) {
                     echo "Running SonarCloud Analysis for project: ${SONAR_PROJECT_KEY}"
-                    bat "mvn clean verify sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.organization=${SONAR_ORG} -Dsonar.host.url=${SONAR_URL} -Dsonar.login=$SONAR_AUTH_TOKEN"
+                    sh "mvn clean verify sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.organization=${SONAR_ORG} -Dsonar.host.url=${SONAR_URL} -Dsonar.login=$SONAR_AUTH_TOKEN"
                 }
             }
         }
@@ -35,16 +40,44 @@ pipeline {
                 stage('Check Docker Version') {
                     steps {
                         script {
-                            bat 'docker --version'
+                            sh 'docker --version'
                         }
                     }
                 }
+        
+           stage('Run Stress Test') {
+            steps {
+                script {
+                    // Run the k6 load test using Docker or installed k6
+                    //k6 run --out json=stress-results.json stress-test.js
+                    //docker run --rm -v $(pwd):/mnt loadimpact/k6 run --out json=/mnt/stress-results.json /mnt/stress-test.js                                          
+                    // sh '/usr/bin/docker run --rm -v $(pwd):/mnt loadimpact/k6 run --out json=/mnt/stress-results.json /mnt/stress-test.js' 
+                    def loadTestScript = "${WORKSPACE}/performanceTesting/stress-test.js"
+                    bat '''
+                        docker run --rm -v %cd%:/mnt loadimpact/k6 run --out json=/mnt/load-results.json /mnt/performanceTesting/stress-test.js
+                    '''
+                }
+            }
+        }
+
+        stage('Run Load Test') {
+            steps {
+                script {
+                    // Run the k6 load test using Docker or installed k6
+                    //sh 'docker run --rm -v $(pwd):/mnt loadimpact/k6 run --out json=/mnt/load-results.json /mnt/load-test.js'
+                   def loadTestScript = "${WORKSPACE}/performanceTesting/load-test.js"
+                   bat '''
+                        docker run --rm -v %cd%:/mnt loadimpact/k6 run --out json=/mnt/load-results.json /mnt/performanceTesting/load-test.js
+                      ''' 
+                }
+            }
+        }
         
          stage('Post-test Cleanup') {
             steps {
                 echo 'Cleaning up after tests'
                 // Optional: Run cleanup tasks
-                bat 'docker container prune -f'  // Example cleanup command
+                sh 'docker container prune -f'  // Example cleanup command
             }
         }
 
