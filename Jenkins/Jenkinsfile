@@ -1,7 +1,7 @@
 pipeline {
     //agent any 
     triggers {
-         githubPush()  # Comment or remove this line
+         githubPush()  // Comment or remove this line
     }
 
  agent any 
@@ -72,7 +72,7 @@ pipeline {
                 }
             }
         }
-        
+
          stage('Post-test Cleanup') {
             steps {
                 echo 'Cleaning up after tests'
