@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Running Maven tests'
                 // Run your Maven tests using the testng.xml configuration file
-                sh 'mvn clean test -Dheadless=true'  // Adjust if you have a specific testng.xml or configuration
+                bat 'mvn clean test -Dheadless=true'  // Adjust if you have a specific testng.xml or configuration
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'SONAR_CLOUD_TOKEN', variable: 'SONAR_AUTH_TOKEN')]) {
                     echo "Running SonarCloud Analysis for project: ${SONAR_PROJECT_KEY}"
-                    sh "mvn clean verify sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.organization=${SONAR_ORG} -Dsonar.host.url=${SONAR_URL} -Dsonar.login=$SONAR_AUTH_TOKEN"
+                    bat "mvn clean verify sonar:sonar -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.organization=${SONAR_ORG} -Dsonar.host.url=${SONAR_URL} -Dsonar.login=$SONAR_AUTH_TOKEN"
                 }
             }
         }
@@ -40,7 +40,7 @@ pipeline {
                 stage('Check Docker Version') {
                     steps {
                         script {
-                            sh 'docker --version'
+                            bat 'docker --version'
                         }
                     }
                 }
@@ -53,7 +53,7 @@ pipeline {
                     //docker run --rm -v $(pwd):/mnt loadimpact/k6 run --out json=/mnt/stress-results.json /mnt/stress-test.js                                          
                     // sh '/usr/bin/docker run --rm -v $(pwd):/mnt loadimpact/k6 run --out json=/mnt/stress-results.json /mnt/stress-test.js' 
                     def loadTestScript = "${WORKSPACE}/performanceTesting/stress-test.js"
-                    sh '''
+                    bat '''
                         docker run --rm -v %cd%:/mnt loadimpact/k6 run --out json=/mnt/load-results.json /mnt/performanceTesting/stress-test.js
                     '''
                 }
@@ -66,7 +66,7 @@ pipeline {
                     // Run the k6 load test using Docker or installed k6
                     //sh 'docker run --rm -v $(pwd):/mnt loadimpact/k6 run --out json=/mnt/load-results.json /mnt/load-test.js'
                    def loadTestScript = "${WORKSPACE}/performanceTesting/load-test.js"
-                   sh '''
+                   bat '''
                         docker run --rm -v %cd%:/mnt loadimpact/k6 run --out json=/mnt/load-results.json /mnt/performanceTesting/load-test.js
                       ''' 
                 }
@@ -77,7 +77,7 @@ pipeline {
             steps {
                 echo 'Cleaning up after tests'
                 // Optional: Run cleanup tasks
-                sh 'docker container prune -f'  // Example cleanup command
+                bat 'docker container prune -f'  // Example cleanup command
             }
         }
 
