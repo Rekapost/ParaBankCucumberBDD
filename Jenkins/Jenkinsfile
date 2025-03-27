@@ -21,7 +21,7 @@ pipeline {
                     stage('Static Code Analysis') {
             environment {
                 SONAR_URL = "https://sonarcloud.io"
-                SONAR_PROJECT_KEY = "AmazonTestNG"  // Replace with your actual SonarCloud project key
+                SONAR_PROJECT_KEY = "ParaBankCucumberBDD"  // Replace with your actual SonarCloud project key
                 SONAR_ORG = "rekasonar"  // Replace with your SonarCloud organization key
             }
             steps {
@@ -31,7 +31,6 @@ pipeline {
                 }
             }
         }
-
 
                 stage('Check Docker Version') {
                     steps {
