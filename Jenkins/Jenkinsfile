@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Running Maven tests'
                 // Run your Maven tests using the testng.xml configuration file
-                sh 'mvn clean test'  // Adjust if you have a specific testng.xml or configuration
+                sh 'mvn clean test -Dheadless=true'  // Adjust if you have a specific testng.xml or configuration
             }
         }
 
