@@ -124,6 +124,15 @@ public class WebDriverFactory {
             options.addArguments("--headless");
         }
     
+            // Detect OS and set the ChromeDriver path accordingly
+        if (System.getProperty("os.name").toLowerCase().contains("linux")) {
+            // For Linux, use the system-installed chromedriver
+            System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        } else {
+            // For Windows, use the local driver in the specified path
+            System.setProperty("webdriver.chrome.driver", "./src/test/resources/ChromeDriver/chromedriver.exe");
+        }
+
         // Selenium Grid Configuration
         if (isGridExecution()) {
             try {
