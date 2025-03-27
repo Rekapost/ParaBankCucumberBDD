@@ -1,0 +1,1279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>chaintest</title>
+    <link href="https://cdn.jsdelivr.net/gh/anshooarora/chaintest/cdn/simple/chaintest-pkg.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <style></style>
+</head>
+
+<body data-bs-theme="dark">
+  <nav class="navbar border-bottom">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a class="navbar-brand" href="#">ChainTest</a>
+        <span class="ms-3 fs-6">automation-bdd-cucumber</span>
+      </div>
+      <div>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 50s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-03-27 03:57:14 PM</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-03-27 03:58:04 PM</span>
+      </div>
+      <div>
+          <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
+            <i class="bi bi-pc-display-horizontal"></i></button>
+        <button role="button" id="shortcuts" class="btn btn-outline-primary smaller" title="Shortcuts">
+            <i class="bi bi-info-circle"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="summary" class="container-fluid bg-body-tertiary">
+    <!-- dashboard section -->
+    <div id="dashboard" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="card card-custom" style="height: 175px">
+              <div class="card-header">
+                Suites
+              </div>
+              <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                <div class="chart-view center" style="margin-left: -1rem;">
+                  <canvas id="stats1"></canvas>
+                </div>
+              </div>
+              <div class="card-footer small">
+                <span id="sp1">1</span> Passed,
+                <span id="sf1">0</span> Failed,
+                <span id="ss1">0</span> Skipped
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card card-custom" style="height: 175px">
+              <div class="card-header">
+                Classes
+              </div>
+              <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                <div class="chart-view center" style="margin-left: -1rem;">
+                  <canvas id="stats2"></canvas>
+                </div>
+              </div>
+              <div class="card-footer small">
+                <span id="sp2">1</span> Passed,
+                <span id="sf2">0</span> Failed,
+                <span id="ss2">0</span> Skipped
+              </div>
+            </div>
+          </div>
+            <div class="col-4">
+              <div class="card card-custom" style="height: 175px">
+                <div class="card-header">
+                  Methods
+                </div>
+                <div class="card-body d-flex justify-content-center" style="height: 90px;">
+                  <div class="chart-view center" style="margin-left: -1rem;">
+                    <canvas id="stats3"></canvas>
+                  </div>
+                </div>
+                <div class="card-footer small">
+                  <span id="sp3">4</span> Passed,
+                  <span id="sf3">0</span> Failed,
+                  <span id="ss3">0</span> Skipped
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- /dashboard section -->
+
+    <!-- tag section -->
+      <div id="tags" class="container pb-5">
+        <div class="card card-custom">
+          <div class="card-header">
+            Tags
+          </div>
+          <div class="card-body">
+            <table id="tag-summary" class="table">
+              <thead>
+                <tr>
+                  <th scope="col" style="width:65%"></th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Passed</th>
+                  <th scope="col">Failed</th>
+                  <th scope="col">Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td><a href="#" class="secondary tag">cucumber</a></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>47s</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="border-bottom"></div>
+    <!-- /tag section -->
+  </div>
+
+  <div class="container-fluid">
+    <div class="border-bottom py-3 mb-5">
+      <div class="container d-flex justify-content-between">
+        <div id="status-filter" aria-label="Filter tests with status">
+          <button type="button" id="passed" class="btn btn-outline-success btn-sm">Passed</button>
+          <button type="button" id="skipped" class="btn btn-outline-warning btn-sm">Skipped</button>
+          <button type="button" id="failed" class="btn btn-outline-danger btn-sm">Failed</button>
+          <button id="clear-filters" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-x-lg me-1"></i>Clear all filters</button>
+        </div>
+        <div>
+          <button type="button" id="summary-toggle" class="btn btn-outline-primary btn-sm">Toggle Summary Section</button>
+        </div>
+      </div>
+    </div>
+      <div class="test-container passed">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="mb-3 testname passed">Feature: I open new account and transfer fund</h6>
+              <div class="small">
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 23ms</span>
+                <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+                <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+              </div>
+                <div class="my-2">
+                    <span class="badge rounded-pill text-bg-secondary">@transferFunds</span>
+                    <span class="badge rounded-pill text-bg-secondary">@registerTransferFunds</span>
+                </div>
+              
+            </div>
+            <div class="col-8">
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario: Transfer fund to New Account</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@transferFunds</span>
+                              <span class="badge rounded-pill text-bg-secondary">@registerTransferFunds</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">2ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given I navigate to "<website>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I fill user details "<First Name>", "<Last Name>", "<Address>", "<City>", "<State>", "<ZipCode>", "<Phone>", "<SSN>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And I enter "<Username>", "<Password>", and "<Confirm Password>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When I submit on Register button</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should be successfully navigated to the accounts page</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given In front page I click "Open New Account"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should see the account creation page</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When I click open new account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I select account type</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I enter deposit ammount</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And I create new account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I get success message for account creation</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given I click TransferFunds</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I enter amount to transfer</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I select From account and To account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I submit Transfer button</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should see the success message</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And I should see the new balance in the account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+            <div class="border-bottom my-5"></div>
+      </div>
+      <div class="test-container passed">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="mb-3 testname passed">Feature: Register in to the website</h6>
+              <div class="small">
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 22ms</span>
+                <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+                <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+              </div>
+                <div class="my-2">
+                    <span class="badge rounded-pill text-bg-secondary">@register</span>
+                    <span class="badge rounded-pill text-bg-secondary">@login</span>
+                    <span class="badge rounded-pill text-bg-secondary">@username=<generated_username></span>
+                    <span class="badge rounded-pill text-bg-secondary">@password=<generated_password></span>
+                </div>
+              
+            </div>
+            <div class="col-8">
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario: Login with credentails</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@register</span>
+                              <span class="badge rounded-pill text-bg-secondary">@login</span>
+                              <span class="badge rounded-pill text-bg-secondary">@username=<generated_username></span>
+                              <span class="badge rounded-pill text-bg-secondary">@password=<generated_password></span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">4ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given I navigate to "<website>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I fill user details "<First Name>", "<Last Name>", "<Address>", "<City>", "<State>", "<ZipCode>", "<Phone>", "<SSN>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And I enter "<Username>", "<Password>", and "<Confirm Password>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When I submit on Register button</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should be successfully navigated to the accounts page</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given I am in LoginPage</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When I enter the registered username "<generated_username>" and password "<generated_password>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When Click login</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And User is logged in to the website</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I validate the credentials</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+            <div class="border-bottom my-5"></div>
+      </div>
+      <div class="test-container passed">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="mb-3 testname passed">Feature: I request loan from the bank</h6>
+              <div class="small">
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 24ms</span>
+                <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+                <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+              </div>
+                <div class="my-2">
+                    <span class="badge rounded-pill text-bg-secondary">@requestLoan</span>
+                    <span class="badge rounded-pill text-bg-secondary">@registerRequestLoan</span>
+                </div>
+              
+            </div>
+            <div class="col-8">
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario: Open New Account and Apply for Loan</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@requestLoan</span>
+                              <span class="badge rounded-pill text-bg-secondary">@registerRequestLoan</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">3ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given I navigate to "<website>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I fill user details "<First Name>", "<Last Name>", "<Address>", "<City>", "<State>", "<ZipCode>", "<Phone>", "<SSN>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And I enter "<Username>", "<Password>", and "<Confirm Password>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When I submit on Register button</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should be successfully navigated to the accounts page</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given In front page I click "Open New Account"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should see the account creation page</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When I click open new account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I select account type</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I enter deposit ammount</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And I create new account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I get success message for account creation</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I click request Loan</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I enter loan amount</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I enter down payment amount</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I select From Account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I submit loan request</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should see the success message for loan approved</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+            <div class="border-bottom my-5"></div>
+      </div>
+      <div class="test-container passed">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="mb-3 testname passed">Feature: I open new account</h6>
+              <div class="small">
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 21ms</span>
+                <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+                <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+              </div>
+                <div class="my-2">
+                    <span class="badge rounded-pill text-bg-secondary">@registerOpenAccount</span>
+                    <span class="badge rounded-pill text-bg-secondary">@openAccount</span>
+                </div>
+              
+            </div>
+            <div class="col-8">
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">Scenario: Open New Account</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">@registerOpenAccount</span>
+                              <span class="badge rounded-pill text-bg-secondary">@openAccount</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">1ms</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given I navigate to "<website>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I fill user details "<First Name>", "<Last Name>", "<Address>", "<City>", "<State>", "<ZipCode>", "<Phone>", "<SSN>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And I enter "<Username>", "<Password>", and "<Confirm Password>"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When I submit on Register button</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should be successfully navigated to the accounts page</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Given In front page I click "Open New Account"</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I should see the account creation page</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">When I click open new account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I select account type</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I enter deposit ammount</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">And I create new account</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">Then I get success message for account creation</span>
+        </div>
+        <div>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+            <div class="border-bottom my-5"></div>
+      </div>
+      <div class="test-container passed">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="mb-3 testname passed">Cross Browser Suite</h6>
+              <div class="small">
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 48s</span>
+                <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:57:15 PM</span>
+                <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
+                  2025-03-27 03:58:04 PM</span>
+              </div>
+                <div class="my-2">
+                    <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+                </div>
+              
+            </div>
+            <div class="col-8">
+                <div class="card mb-1 result passed">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="ms-2">testRunner.TestNgRunner</span>
+                      </div>
+                      <div>
+                          <span class="tag-list">
+                              <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+                          </span>
+                          <span class="mx-1">&middot;</span>
+                        <span class="badge text-dark bg-light">48s</span>
+                      </div>
+                    </div>
+                    
+  <div class="mt-3 border-top">
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">runScenario</span>
+        </div>
+        <div>
+            <span class="tag-list">
+                <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+            </span>
+            <span class="mx-1">&middot;</span>
+          <span class="badge text-dark bg-light">12s</span>
+        </div>
+      </div>
+      <code class="ms-4 small">["Login with credentails", "Register in to the website"]</code>
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">runScenario</span>
+        </div>
+        <div>
+            <span class="tag-list">
+                <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+            </span>
+            <span class="mx-1">&middot;</span>
+          <span class="badge text-dark bg-light">10s</span>
+        </div>
+      </div>
+      <code class="ms-4 small">["Open New Account", "I open new account"]</code>
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">runScenario</span>
+        </div>
+        <div>
+            <span class="tag-list">
+                <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+            </span>
+            <span class="mx-1">&middot;</span>
+          <span class="badge text-dark bg-light">12s</span>
+        </div>
+      </div>
+      <code class="ms-4 small">["Transfer fund to New Account", "I open new account and transfer fund"]</code>
+    </div>
+    <div class="leaf passed">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="ms-2">runScenario</span>
+        </div>
+        <div>
+            <span class="tag-list">
+                <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+            </span>
+            <span class="mx-1">&middot;</span>
+          <span class="badge text-dark bg-light">11s</span>
+        </div>
+      </div>
+      <code class="ms-4 small">["Open New Account and Apply for Loan", "I request loan from the bank"]</code>
+    </div>
+  </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+          <div class="border-bottom py-5"></div>
+      </div>
+  </div>
+
+  <script>
+    const stats1Annotation = {'total': 1, 'passed': 1};
+    const stats1 = [
+      { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+      { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+      { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+    ];
+      const stats2Annotation = {'total': 1, 'passed': 1};
+      const stats2 = [
+        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+        { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+      ];
+      const stats3Annotation = {'total': 4, 'passed': 4};
+      const stats3 = [
+        { result: 'Passed', count: 4, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+        { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
+      ];
+     
+  </script>
+    <script src="https://cdn.jsdelivr.net/gh/anshooarora/chaintest@44756c2b27c4da9d1141ae2de0fc3dda852f17a1/cdn/simple/version/chaintest-pkg.js"></script>
+
+    <div id="sys-info-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title">System</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              onclick="toggleSysInfo(false)"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tbody>
+                  <tr>
+                    <td>java.version</td>
+                    <td>17.0.11</td>
+                  </tr>
+                  <tr>
+                    <td>java.vm.name</td>
+                    <td>Java HotSpot(TM) 64-Bit Server VM</td>
+                  </tr>
+                  <tr>
+                    <td>java.vm.vendor</td>
+                    <td>Oracle Corporation</td>
+                  </tr>
+                  <tr>
+                    <td>java.class.version</td>
+                    <td>61.0</td>
+                  </tr>
+                  <tr>
+                    <td>java.runtime.name</td>
+                    <td>Java(TM) SE Runtime Environment</td>
+                  </tr>
+                  <tr>
+                    <td>os.name</td>
+                    <td>Windows 11</td>
+                  </tr>
+                  <tr>
+                    <td>os.arch</td>
+                    <td>amd64</td>
+                  </tr>
+                  <tr>
+                    <td>os.version</td>
+                    <td>10.0</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              onclick="toggleSysInfo(false)">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div id="info-modal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">ChainTest Simple Generator - Shortcuts</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="toggleInfoModal(false)"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <tbody>
+                <tr>
+                  <td>esc</td>
+                  <td>Reset all filters</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>Toggle theme (light/dark)</td>
+                </tr>
+                <tr>
+                  <td>s</td>
+                  <td>Toggle skipped tests</td>
+                </tr>
+                <tr>
+                  <td>p</td>
+                  <td>Toggle passed tests</td>
+                </tr>
+                <tr>
+                  <td>f</td>
+                  <td>Toggle failed tests</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="toggleInfoModal(false)">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="attachment-modal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Attachment</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            onclick="toggleAttachmentModal(false)"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="toggleAttachmentModal(false)">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
