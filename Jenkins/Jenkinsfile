@@ -1,8 +1,8 @@
 pipeline {
-    //agent any 
-    triggers {
-         githubPush()  // Comment or remove this line
-    }
+    
+    //triggers {
+    //     githubPush()  // Comment or remove this line
+    //}
 
  agent any 
  
