@@ -50,7 +50,7 @@ Load Test:
 
 Static Code Analysis:
 mvn clean verify sonar:sonar -Dsonar.projectKey=Rekapost_ParaBankCucumberBDD -Dsonar.organization=rekasonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_AUTH_TOKEN}
-C:\Users\nreka\vscodedevops\parabank>mvn clean verify sonar:sonar -Dsonar.projectKey=ParaBankCucumberBDD -Dsonar.organization=rekasonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=45775a0f12b8469d4619ddc4d24d7e5faf3aa4e0
+C:\Users\nreka\vscodedevops\parabank>mvn clean verify sonar:sonar -Dsonar.projectKey=ParaBankCucumberBDD -Dsonar.organization=rekasonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=45775b8469d4619ddd24d7e5faf3aa4e0
   ![alt text](image-11.png)
   ![alt text](image-15.png)
   ![alt text](image-16.png)

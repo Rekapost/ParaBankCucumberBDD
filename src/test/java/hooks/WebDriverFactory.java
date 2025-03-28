@@ -156,7 +156,7 @@ public class WebDriverFactory {
                 // Step 1: LambdaTest Capabilities
                 Map<String, Object> ltOptions = new HashMap<>();
                 ltOptions.put("username", "rekaharisri");
-                ltOptions.put("accessKey", "0UV2Eyfkmupm6epnxh6RK6UDtMOebAibFwtZO1WxuPqeySA0zW");
+                ltOptions.put("accessKey", "0UV2EyfkmupmebAibFwtZO1WxuPqeySA0zW");
                 //ltOptions.put("user", ltUsername); // Fetch from environment
                 //ltOptions.put("accessKey", ltAccessKey);
                 //ltOptions.put("username", System.getenv("LT_USERNAME"));
