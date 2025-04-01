@@ -1,4 +1,5 @@
 package hooks;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 
 import org.apache.commons.io.FileUtils;
@@ -10,6 +11,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.qameta.allure.Allure;
 
 public class hook {
     private static WebDriver driver;  // ThreadLocal WebDriver will be used in WebDriverFactory
@@ -51,6 +53,14 @@ public class hook {
             System.out.println("Test failed, attaching screenshot");
             // Take screenshot and embed it
             String screenshotPath = System.getProperty("user.dir") + "/FailedScreenshots/" + scenario.getName() + ".png";
+            
+            //Allure Report Integration
+            Allure.addAttachment("AllureScreenshot",
+            new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+            //Attaching Screenshot to Cucumber Reports
+            final byte[] cucumberscreenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(cucumberscreenshot, "image/png", "CucumberScreenshot");
+
             //File destinationFile = new File("./target/reports/Screenshots/" + testName + ".png");
             File destinationFile = new File(screenshotPath);   
             FileUtils.copyFile(sourceFile, destinationFile);

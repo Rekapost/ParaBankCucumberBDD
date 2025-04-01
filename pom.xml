@@ -247,8 +247,7 @@
             <version>2.3.34</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber-jvm -->
-        <dependency>
+         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber-jvm</artifactId>
             <version>2.20.1</version>
@@ -259,4 +258,5 @@
             <version>2.21.0</version>
         </dependency>
     </dependencies>
-</project>
+</project><!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber-jvm -->
+       
